@@ -1,8 +1,22 @@
 :root {
-
   /* ----Colors---- */
   --primary-color: #69974e;
   --primary-light-color: #75a857;
   --primary-disabled-color: #90b978;
-  --primary-white: #ffffff;
+  --white-color: #ffffff;
+
+  --error-color: #d12020;
+
+  --overlay-color:rgba(0 0 0 / 60%);
+
+  --lable-text-color: var(--white-color);
+  --outline-color: var(--white-color);
+
+  /* ----Radius---- */
+  --button-radius: 4px;
+
+
+  /* ----Z index---- */
+
+  --modal-z-index: 10;
 }

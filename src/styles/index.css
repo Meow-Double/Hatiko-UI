@@ -15,3 +15,7 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
+.modal{
+  max-width: 600px;
+}

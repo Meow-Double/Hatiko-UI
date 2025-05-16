@@ -1,0 +1,28 @@
+.typography {
+  line-height: 100%;
+}
+
+.regular_16 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.medium_16 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.bold_16 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.regular_24 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.medium_24 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.bold_24 {
+  font-size: 24px;
+  font-weight: 700;
+}

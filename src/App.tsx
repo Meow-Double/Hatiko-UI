@@ -1,29 +1,20 @@
-import { SearchIcon } from "./library/icons";
-import { Button } from "./library/uikit";
+import { useState } from 'react';
+
+import { Button, Modal, Typogarphy } from './library/uikit';
 
 const App = () => {
-  const testAlert = () => {
-    alert("test alert");
-  };
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex_block">
-      <Button variant="primary">test button</Button>
-      <Button variant="primary" loading>
-        test button
+    <div className='flex_block'>
+      <Button variant='outline' onClick={() => setIsOpen(true)}>
+        <Typogarphy tag='h1' variant='regular_16'>
+          Click me
+        </Typogarphy>
       </Button>
-      <Button variant="outline">test button</Button>
-      <Button onClick={testAlert} variant="outline" startIcon={<SearchIcon />}>
-        test button
-      </Button>
-      <Button
-        onClick={testAlert}
-        variant="primary"
-        endIcon={<SearchIcon />}
-        disabled
-      >
-        disabled
-      </Button>
+      <Modal lazy classNameBody='modal' isOpen={isOpen} closeModal={() => setIsOpen(false)}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim quo deleniti ipsam eum
+        blanditiis ex, exercitationem{' '}
+      </Modal>
     </div>
   );
 };

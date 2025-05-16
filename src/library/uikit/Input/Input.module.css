@@ -1,0 +1,49 @@
+
+.label{
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+
+    color:var(--lable-text-color);
+
+}
+
+.icon_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    border:1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 12px;
+    
+    &:focus-within{
+        outline: 2px solid var(--outline-color);
+    }
+}
+
+.input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    width: 100%;
+    color: var(--white-color);
+}
+
+
+.primary{
+    background-color: var(--primary-color);
+}
+
+.outline{
+    border-color: var(--primary-color);
+}
+
+/* ----Error---- */
+.error{
+border-color: var(--error-color);
+}
+.error_text{
+    color: var(--error-color)
+}
