@@ -1,0 +1,16 @@
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    overflow-x: auto;
+}
+
+.item{
+    color:var(--white-color)
+}
+
+.active{
+    color:var(--error-color);
+}

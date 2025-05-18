@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   align-items: center;
+
+  justify-content: center;
   padding: 6px 12px;
   border: 1px solid transparent;
   border-radius: var(--button-radius);
@@ -11,8 +13,6 @@
   font-size: 16px;
   gap: 8px;
   transition: transform 0.1s ease-in;
-
-  justify-content: center;
 
   &:active {
     transform: translateY(2px);
@@ -43,8 +43,8 @@
   }
 
   &:disabled {
-    background-color: transparent;
     border-color: var(--primary-disabled-color);
+    background-color: transparent;
   }
 }
 

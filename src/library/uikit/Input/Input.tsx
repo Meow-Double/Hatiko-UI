@@ -13,7 +13,7 @@ interface InputProps extends ComponentProps<'input'> {
 }
 
 export const Input = (props: InputProps) => {
-  const { variant, label, error, className, endIcon, ...otherProps } = props;
+  const { variant, label, error, className, endIcon, type = 'text', ...otherProps } = props;
 
   const id = useId();
 
@@ -25,7 +25,7 @@ export const Input = (props: InputProps) => {
           [styles.error]: !!error
         })}
       >
-        <input type='text' id={id} className={styles.input} {...otherProps} />
+        <input type={type} id={id} className={styles.input} {...otherProps} />
         {!!endIcon && <span>{endIcon}</span>}
       </div>
       {!!error && <span className={styles.error_text}>{error}</span>}

@@ -2,21 +2,21 @@
 .label{
     display: flex;
     flex-direction: column;
-    gap:4px;
 
     color:var(--lable-text-color);
+    gap:4px;
 
 }
 
 .icon_wrapper{
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap:20px;
+    padding: 6px 12px;
     border:1px solid transparent;
     border-radius: 4px;
-    padding: 6px 12px;
+    gap:20px;
     
     &:focus-within{
         outline: 2px solid var(--outline-color);
@@ -24,11 +24,11 @@
 }
 
 .input{
-    background-color: transparent;
-    border:none;
-    outline: none;
     width: 100%;
+    border:none;
+    background-color: transparent;
     color: var(--white-color);
+    outline: none;
 }
 
 
@@ -41,9 +41,11 @@
 }
 
 /* ----Error---- */
+
 .error{
 border-color: var(--error-color);
 }
+
 .error_text{
     color: var(--error-color)
 }

@@ -1,27 +1,26 @@
 .overlay {
-  background-color: var(--overlay-color);
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   z-index: var(--modal-z-index);
 
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--overlay-color);
+  inset: 0;
+
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 
   transition: all 0.2s ease;
+  visibility: hidden;
 }
 
 .body {
+
+  width: 100%;
   padding: 20px;
   border-radius: 4px;
   background-color: var(--primary-color);
@@ -29,18 +28,16 @@
 
   transform: translateY(30px);
   transition: transform 0.2s ease;
-
-  width: 100%;
 }
 
 .active {
   opacity: 1;
-  visibility: visible;
   pointer-events: visible;
+  visibility: visible;
 }
 
 .active .body {
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 
@@ -48,17 +45,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:20px;
 
     margin-bottom: 20px;
+    gap:20px;
 }
 
 .close_btn{
-    background-color: transparent;
     border:none;
-    cursor: pointer;
-
-    color:var(--white-color);
 
     margin-left: auto;
+    background-color: transparent;
+
+    color:var(--white-color);
+    cursor: pointer;
 }
