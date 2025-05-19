@@ -47,7 +47,7 @@ const App = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim quo deleniti ipsam eum
         blanditiis ex, exercitationem{' '}
       </Modal>
-
+      
       <Select items={['1', '2']} />
       <Accordion items={AccordionItems} />
       <Accordion items={AccordionItems} toggle />
