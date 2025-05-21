@@ -5,7 +5,7 @@ import styles from "./Button.module.css";
 
 type ButtonVariants = "primary" | "outline";
 
-interface ButtonProps extends ComponentProps<"button"> {
+export interface ButtonProps extends ComponentProps<"button"> {
   children: ReactNode;
   variant: ButtonVariants;
   startIcon?: ReactNode;

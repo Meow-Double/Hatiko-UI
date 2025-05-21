@@ -19,3 +19,8 @@ body {
 .modal{
   max-width: 600px;
 }
+
+.btn_compound{
+  display: flex;
+  justify-content: space-between;
+}

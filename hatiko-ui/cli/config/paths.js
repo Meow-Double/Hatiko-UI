@@ -3,7 +3,7 @@ const path = require('path');
 
 const srcDir = path.join(__dirname, '..', '..', 'src');
 const pathIconsDir = path.join(srcDir, 'icons');
-const uncompountFolder = path.join(__dirname, '..', '..', 'src', 'uncompount');
+const uncompountFolder = path.join(__dirname, '..', '..', 'src', 'uncompound');
 const pathStylesDir = path.join(__dirname, '..', '..', 'src', 'styles');
 
 const destDir = path.join(process.cwd(), 'hatiko-ui');

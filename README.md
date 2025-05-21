@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-0088CC?style=for-the-badge&logo=React&logoColor=white) 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white) 
 ![Css-Modules](https://img.shields.io/badge/Css--Modules-663399?style=for-the-badge&logo=css-modules&logoColor=white) \
-![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=Jest&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=Vitest&logoColor=white)
 ![Testing library](https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=TestingLibrary&logoColor=white) 
 ![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=Storybook&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
@@ -107,28 +107,28 @@ There are also options for compound and uncompound components. And availability 
 
 | Component           | Status | Variants    |Availability|
 |---------------------|--------|-------------|------------|
-| **Button**          | ✅    |  `Compount` | |
-| **Input**          | ✅    |  `Compount` | |
-| **Textarea**          | ✅    |  `Compount` | |
-| **Checkbox**          | ✅    |  `Compount` | |
-| **Modal**          | ✅    |  `Compount` | |
-| **Drawer**          | ✅    |  `Compount` | |
-| **Badge**          | ✅    |  `Compount` | |
-| **Select**          | ✅    |  `Compount` | |
-| **Typography**          | ✅    |  `Compount` | |
-| **Breadcrumbs**          | 🛠️    |  `Compount` | |
-| **Accordion**          | 🛠️    |  `Compount` | |
-| **InputOTP**          | 🛠️    |  `Compount` | |
-| **Linkify**          | 🛠️    |  `Compount` | |
-| **Tooltip**          | ❌    |  `Compount` | |
-| **FileUpload**          | ❌    |  `Compount` | |
-| **ImagePopup**          | ❌    |  `Compount` | |
-| **Confirm**          | ❌    |  `Compount` | |
-| **Alert**          | ❌    |  `Compount` | |
-| **Dropdown**          | ❌    |  `Compount` | |
-| **Toast**          | ❌    |  `Compount` | |
-| **Range**          | ❌    |  `Compount` | |
-| **Pagination**          | ❌    |  `Compount` | |
+| **Button**          | ✅    |  `Uncompound` | `Compound` | 🧪|
+| **Input**          | ✅    |  `Uncompound` | 🧪 |
+| **Textarea**          | ✅    |  `Uncompound` |🧪 |
+| **Checkbox**          | ✅    |  `Uncompound` | |
+| **Modal**          | ✅    |  `Uncompound` | |
+| **Drawer**          | ✅    |  `Uncompound` | |
+| **Badge**          | ✅    |  `Uncompound` | 🧪|
+| **Select**          | ✅    |  `Uncompound` | |
+| **Typography**          | ✅    |  `Uncompound` | |
+| **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
+| **Accordion**          | 🛠️    |  `Uncompound` | |
+| **InputOTP**          | 🛠️    |  `Uncompound` | |
+| **Linkify**          | 🛠️    |  `Uncompound` | |
+| **Tooltip**          | ❌    |  `Uncompound` | |
+| **FileUpload**          | ❌    |  `Uncompound` | |
+| **ImagePopup**          | ❌    |  `Uncompound` | |
+| **Confirm**          | ❌    |  `Uncompound` | |
+| **Alert**          | ❌    |  `Uncompound` | |
+| **Dropdown**          | ❌    |  `Uncompound` | |
+| **Toast**          | ❌    |  `Uncompound` | |
+| **Range**          | ❌    |  `Uncompound` | |
+| **Pagination**          | ❌    |  `Uncompound` | |
 
 </div>
 
@@ -141,7 +141,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Button
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
@@ -171,7 +171,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Input
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | compulsory |
@@ -198,7 +198,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Textarea
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
@@ -322,7 +322,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Badge
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
