@@ -107,15 +107,15 @@ There are also options for compound and uncompound components. And availability 
 
 | Component           | Status | Variants    |Availability|
 |---------------------|--------|-------------|------------|
-| **Button**          | ✅    |  `Uncompound` | `Compound` | 🧪|
+| **Button**          | ✅    |  `Uncompound` \| `Compound` | 🧪|
 | **Input**          | ✅    |  `Uncompound` | 🧪 |
-| **Textarea**          | ✅    |  `Uncompound` |🧪 |
-| **Checkbox**          | ✅    |  `Uncompound` | |
-| **Modal**          | ✅    |  `Uncompound` | |
+| **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪 |
+| **Checkbox**          | ✅    |  `Uncompound` | 🧪|
+| **Modal**          | ✅    |  `Uncompound` | 🧪|
 | **Drawer**          | ✅    |  `Uncompound` | |
 | **Badge**          | ✅    |  `Uncompound` | 🧪|
 | **Select**          | ✅    |  `Uncompound` | |
-| **Typography**          | ✅    |  `Uncompound` | |
+| **Typography**          | ✅    |  `Uncompound` |🧪 |
 | **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
 | **Accordion**          | 🛠️    |  `Uncompound` | |
 | **InputOTP**          | 🛠️    |  `Uncompound` | |
@@ -225,7 +225,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Checkbox
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
@@ -372,7 +372,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Typography
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |

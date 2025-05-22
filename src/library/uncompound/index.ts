@@ -6,4 +6,4 @@ export { Linkify } from './Linkify/Linkify';
 export { Modal } from './Modal/Modal';
 export { Select } from './Select/Select';
 export { Textarea } from './Textarea/Textarea';
-export { Typogarphy } from './Typogarphy/Typogarphy';
+export { Typogarphy } from './Typogarphy/Typography';

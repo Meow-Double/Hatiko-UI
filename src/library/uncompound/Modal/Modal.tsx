@@ -6,7 +6,7 @@ import { CloseIcon } from '../../icons';
 
 import styles from './Modal.module.css';
 
-interface ModalProps {
+export interface ModalProps {
   children: ReactNode;
   classNameOverlay?: string;
   classNameBody?: string;
@@ -16,6 +16,13 @@ interface ModalProps {
   closeModal: () => void;
   lazy?: boolean;
 }
+
+export const MODAL_TEST_IDS = {
+  TITLE: 'modal-title',
+  CLOSE_BUTTON: 'modal-close_button',
+  OVERLAY: 'modal-overlay',
+  BODY: 'modal-body'
+};
 
 export const Modal = (props: ModalProps) => {
   const {
@@ -67,13 +74,22 @@ export const Modal = (props: ModalProps) => {
       <div
         className={clsx(styles.overlay, classNameOverlay, { [styles.active]: isOpen })}
         onClick={closeModal}
+        data-testid={MODAL_TEST_IDS.OVERLAY}
       >
-        <div onClick={onClickContent} className={clsx(styles.body, classNameBody)}>
+        <div
+          onClick={onClickContent}
+          className={clsx(styles.body, classNameBody)}
+          data-testid={MODAL_TEST_IDS.BODY}
+        >
           {(!!title || closeBtn) && (
             <div className={styles.header}>
-              {!!title && <div>{title}</div>}
+              {!!title && <div data-testid={MODAL_TEST_IDS.TITLE}>{title}</div>}
               {closeBtn && (
-                <button className={styles.close_btn} onClick={closeModal}>
+                <button
+                  className={styles.close_btn}
+                  onClick={closeModal}
+                  data-testid={MODAL_TEST_IDS.CLOSE_BUTTON}
+                >
                   <CloseIcon />
                 </button>
               )}

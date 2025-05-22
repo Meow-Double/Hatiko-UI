@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 
+import { Textarea } from "./library/compound/Textarea/Textarea";
+
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -57,6 +59,11 @@ const App = () => {
       <Drawer title='Title drawer' isOpen={isOpenDrawer} closeDrawer={() => setIsOpenDrawer(false)}>
         test
       </Drawer> */}
+      <Textarea.Wrapper >
+        <Textarea.Label label="test"/>
+        <Textarea variant="primary"/>
+        <Textarea.Error error="error"/>
+      </Textarea.Wrapper>
     </div>
   );
 };

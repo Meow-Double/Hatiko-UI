@@ -5,11 +5,17 @@ import { TickIcon } from '../../icons';
 
 import styles from './Checkbox.module.css';
 
-interface CheckboxProps extends Omit<ComponentProps<'input'>, 'type'> {
+export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'type'> {
   label?: string;
   className?: string;
   getCheckboxState?: (state: boolean) => void;
 }
+
+export const CHECKBOX_TEST_IDS = {
+  LABEL: 'checkbox-label',
+  LABEL_TEXT: 'checkbox-label_text',
+  TICK_ICON: 'checkbox-tick_icon'
+};
 
 export const Checkbox = (props: CheckboxProps) => {
   const { label, className, getCheckboxState, ...otherProps } = props;
@@ -26,7 +32,11 @@ export const Checkbox = (props: CheckboxProps) => {
   }, [isActive, getCheckboxState]);
 
   return (
-    <label htmlFor={id} className={clsx(styles.label, className)}>
+    <label
+      htmlFor={id}
+      className={clsx(styles.label, className)}
+      data-testid={CHECKBOX_TEST_IDS.LABEL}
+    >
       <input
         onChange={onChange}
         onKeyDown={onChange}
@@ -35,8 +45,10 @@ export const Checkbox = (props: CheckboxProps) => {
         className={styles.input}
         {...otherProps}
       />
-      <span className={styles.checkbox}>{isActive && <TickIcon className={styles.icon} />}</span>
-      {label && <span>{label}</span>}
+      <span className={styles.checkbox}>
+        {isActive && <TickIcon className={styles.icon} data-testid={CHECKBOX_TEST_IDS.TICK_ICON} />}
+      </span>
+      {label && <span data-testid={CHECKBOX_TEST_IDS.LABEL_TEXT}>{label}</span>}
     </label>
   );
 };
