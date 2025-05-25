@@ -100,22 +100,22 @@ A table of components is provided below. There are also designations such as:
 - Absent ❌  
 - In development 🛠️  
 - Covered by tests 🧪  
-- History 📕  
+- Stories 📕  
 
 There are also options for compound and uncompound components. And availability of component histories and test coverage
 
 
 | Component           | Status | Variants    |Availability|
 |---------------------|--------|-------------|------------|
-| **Button**          | ✅    |  `Uncompound` \| `Compound` | 🧪|
-| **Input**          | ✅    |  `Uncompound` | 🧪 |
-| **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪 |
-| **Checkbox**          | ✅    |  `Uncompound` | 🧪|
-| **Modal**          | ✅    |  `Uncompound` | 🧪|
-| **Drawer**          | ✅    |  `Uncompound` | |
-| **Badge**          | ✅    |  `Uncompound` | 🧪|
-| **Select**          | ✅    |  `Uncompound` | |
-| **Typography**          | ✅    |  `Uncompound` |🧪 |
+| **Button**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
+| **Input**          | ✅    |  `Uncompound` | 🧪📕|
+| **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
+| **Checkbox**          | ✅    |  `Uncompound` | 🧪📕|
+| **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
+| **Drawer**          | ✅    |  `Uncompound` |📕 |
+| **Badge**          | ✅    |  `Uncompound` | 🧪📕|
+| **Select**          | ✅    |  `Uncompound` |🧪📕 |
+| **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
 | **Accordion**          | 🛠️    |  `Uncompound` | |
 | **InputOTP**          | 🛠️    |  `Uncompound` | |
@@ -142,7 +142,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Button
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -172,7 +172,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Input
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | compulsory |
 |----------------|-----|---------------|
@@ -199,7 +199,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Textarea
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -226,7 +226,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Checkbox
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -253,8 +253,8 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Modal
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -290,7 +290,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Drawer
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -323,7 +323,7 @@ Here are examples of using components with descriptions of their props. Each com
 #### Badge
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -345,8 +345,8 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Select
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
@@ -373,7 +373,8 @@ Here are examples of using components with descriptions of their props. Each com
 #### Typography
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Test](https://img.shields.io/badge/-Stories❌-DD0B78?style=social-square&link=#!)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
 
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|

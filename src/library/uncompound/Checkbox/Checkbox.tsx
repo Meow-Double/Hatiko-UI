@@ -18,8 +18,8 @@ export const CHECKBOX_TEST_IDS = {
 };
 
 export const Checkbox = (props: CheckboxProps) => {
-  const { label, className, getCheckboxState, ...otherProps } = props;
-  const [isActive, setIsActive] = useState(false);
+  const { label, className, getCheckboxState, checked = false, ...otherProps } = props;
+  const [isActive, setIsActive] = useState(checked);
 
   const id = useId();
 
@@ -43,6 +43,7 @@ export const Checkbox = (props: CheckboxProps) => {
         id={id}
         type='checkbox'
         className={styles.input}
+        checked={checked}
         {...otherProps}
       />
       <span className={styles.checkbox}>

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Textarea, TEXTAREA_TEST_IDS, TextareaProps } from './Textarea';
 
-import styles from './Texarea.module.css';
+import styles from './Textarea.module.css.module.css';
 
 const textareaProps = {
   variant: 'primary'

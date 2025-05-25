@@ -29,6 +29,11 @@
     background-color: transparent;
     color: var(--white-color);
     outline: none;
+
+    &::placeholder{
+        color:var(--text-color);
+        font-family: inherit;
+    }
 }
 
 

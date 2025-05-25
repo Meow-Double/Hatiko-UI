@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from 'react';
 import clsx from 'clsx';
 
 import styles from './Typography.module.css'
-type TypographyVariants =
+export type TypographyVariants =
   | 'regular_16'
   | 'medium_16'
   | 'bold_16'

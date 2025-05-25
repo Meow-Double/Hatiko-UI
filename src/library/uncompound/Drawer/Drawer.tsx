@@ -6,7 +6,7 @@ import { CloseIcon } from '../../icons';
 
 import styles from './Drawer.module.css';
 
-interface DrawerProps {
+export interface DrawerProps {
     children: ReactNode;
     isOpen:boolean;
     closeDrawer: () => void;

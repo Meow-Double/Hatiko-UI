@@ -1,6 +1,10 @@
 // import { useState } from 'react';
 
-import { Textarea } from "./library/compound/Textarea/Textarea";
+
+import { useState } from "react";
+
+import { Modal } from "./library/compound/Modal/Modal";
+
 
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
@@ -30,7 +34,7 @@ import { Textarea } from "./library/compound/Textarea/Textarea";
 
 const App = () => {
 
-
+const [isOpen, setIsOpen] = useState(true)
   
   return (
     <div className='flex_block'>
@@ -59,11 +63,21 @@ const App = () => {
       <Drawer title='Title drawer' isOpen={isOpenDrawer} closeDrawer={() => setIsOpenDrawer(false)}>
         test
       </Drawer> */}
-      <Textarea.Wrapper >
+      {/* <Textarea.Wrapper >
         <Textarea.Label label="test"/>
         <Textarea variant="primary"/>
         <Textarea.Error error="error"/>
-      </Textarea.Wrapper>
+      </Textarea.Wrapper> */}
+      {/* <Dropdown items={["item1", "item2", "item3"]}/> */}
+      <Modal closeModal={() => setIsOpen(false)} isOpen={isOpen}>
+        <Modal.Header>
+          <Modal.Title title="title"/>
+          <Modal.CloseBtn />
+        </Modal.Header>
+        <Modal.Content>
+          Modal window
+        </Modal.Content>
+      </Modal>
     </div>
   );
 };

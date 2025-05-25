@@ -24,6 +24,7 @@ width: 100%;
 max-width: 300px;
 padding: 20px;
 background-color: var(--primary-color);
+color:var(--white-color);
 
 transform: translateX(-100%);
 

@@ -1,5 +1,10 @@
-const { eslint } = require("@meow-double/eslint");
+const { eslint } = require('@meow-double/eslint');
 
-module.exports = eslint({defaultRules:{
-    "custom/one-component":"off"
-}});
+module.exports = eslint({
+  storybook: true,
+  defaultRules: {
+    'custom/one-component': 'off',
+    'react/display-name': 'off',
+    'react-hooks/rules-of-hooks': 'off'
+  }
+});

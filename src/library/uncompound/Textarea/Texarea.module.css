@@ -19,6 +19,12 @@
   color: var(--white-color);
   outline: none;
   resize: vertical;
+
+
+    &::placeholder{
+        color:var(--text-color);
+        font-family: inherit;
+    }
 }
 
 /* ----Errors---- */
