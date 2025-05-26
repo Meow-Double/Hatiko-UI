@@ -115,17 +115,17 @@ There are also options for compound and uncompound components. And availability 
 | **Drawer**          | ✅    |  `Uncompound` |📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
 | **Select**          | ✅    |  `Uncompound` |🧪📕 |
+| **Dropdown**          | ✅    |  `Uncompound` |📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
+| **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
+| **Confirm**          | ✅    |  `Uncompound` |📕|
+| **Accordion**          | ✅    |  `Uncompound` |📕 |
 | **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
-| **Accordion**          | 🛠️    |  `Uncompound` | |
 | **InputOTP**          | 🛠️    |  `Uncompound` | |
-| **Linkify**          | 🛠️    |  `Uncompound` | |
 | **Tooltip**          | ❌    |  `Uncompound` | |
 | **FileUpload**          | ❌    |  `Uncompound` | |
 | **ImagePopup**          | ❌    |  `Uncompound` | |
-| **Confirm**          | ❌    |  `Uncompound` | |
 | **Alert**          | ❌    |  `Uncompound` | |
-| **Dropdown**          | ❌    |  `Uncompound` | |
 | **Toast**          | ❌    |  `Uncompound` | |
 | **Range**          | ❌    |  `Uncompound` | |
 | **Pagination**          | ❌    |  `Uncompound` | |
@@ -369,6 +369,41 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
+#### Dropdown
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| items | `Array<{link:string, text:string, id:number \| string}>`   | true|
+| title   |  `string` | true|
+| classNameMenu   |  `string` | false|
+| classNameShowBar   |  `string` | false|
+
+</br>
+
+
+```
+      <Drowdown
+          title="Food menu"
+          items={[
+            {
+                id:1,
+                text:"Pizzas",
+                link:"/menu/pizzas"
+            },
+            {
+                id:2,
+                text:"Desserts",
+                link:"/menu/desserts"
+            }
+          ]}
+          classNameShowBar="dropdown_bar"
+      />
+```
+
+</br>
 
 #### Typography
 
@@ -398,7 +433,75 @@ Here are examples of using components with descriptions of their props. Each com
   
 </div>
 
+
 </br>
+
+#### Linkify
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `string`   | true|
+
+</br>
+
+
+```
+      <Linkify>
+          Go to the website: https://github.com/Meow-Double
+      </Linkify>
+```
+- <b>Linkify</b> - a component that accepts text, and if links are encountered in the text, they will be replaced by an html tag `<a href=“...”>...</a>`
+
+
+</br>
+
+
+#### Confirm
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `string`   | true|
+| classNameOverlay | `string`   | false|
+| classNameBody | `string`   | false|
+| getAnswer | `(answer: boolean) => void`   | true|
+| isOpen | `boolean`   | true|
+| closeWindow | `() => void`   | true|
+| lazy | `boolean`   | false|
+
+</br>
+
+
+```
+      <Confirm 
+            title="Do you use a hatiko-ui?"
+            isOpen={isOpen}
+            closeWindow={closeWindow}
+            getAnswer={onGetAnswer}
+            lazy
+      />
+```
+
+
+</br>
+  
+
+
+
+
+</div>
+
+
+</br>
+
+
 
 
 <div id="cli">

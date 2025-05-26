@@ -3,7 +3,9 @@
 
 import { useState } from "react";
 
-import { Modal } from "./library/compound/Modal/Modal";
+import { Button, Linkify } from "./library/uncompound";
+import { Confirm } from "./library/uncompound/Confirm/Confirm";
+import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
 
 
 // import { Button } from './library/compound/Button/Button';
@@ -17,28 +19,33 @@ import { Modal } from "./library/compound/Modal/Modal";
 // const AccordionItems = [
 //   {
 //     id: 1,
-//     title: 'Hello world 1',
-//     text: 'sadd'
+//     title: 'Title 1',
+//     text: 'Nulla, tempore veritatis. Nostrum, odit reprehenderit atque maiores eveniet eligendi fugit, quos vel corrupti saepe accusantium consectetur corporis sed nulla a quisquam!'
 //   },
 //   {
 //     id: 2,
-//     title: 'Hello world 1',
-//     text: 'sdfdf'
+//     title: 'Title 2',
+//     text: 'Nostrum, odit reprehenderit atque maiores eveniet eligendi fugit, quos vel corrupti saepe accusantium consectetur corporis sed nulla a quisquam!'
 //   },
 //   {
 //     id: 3,
-//     title: 'Hello world 1',
-//     text: 'sfdfg'
+//   title: 'Title 3',
+//     text: '  Lorem ipsum dolor sit amet consectetur adipisicing elit!'
 //   }
 // ];
 
 const App = () => {
 
-const [isOpen, setIsOpen] = useState(true)
-  
+const [isOpen, setIsOpen] = useState(false);
+
+
+const onAnswer = (answer: boolean) => {
+  alert(answer)
+}
+
   return (
     <div className='flex_block'>
-
+      <Button variant="primary" onClick={() => setIsOpen(true)}>onClick</Button>
       {/* <Button variant='outline' onClick={() => setIsOpen(true)}>
         <Typogarphy tag='h1' variant='regular_16'>
           Click me
@@ -68,8 +75,15 @@ const [isOpen, setIsOpen] = useState(true)
         <Textarea variant="primary"/>
         <Textarea.Error error="error"/>
       </Textarea.Wrapper> */}
-      {/* <Dropdown items={["item1", "item2", "item3"]}/> */}
-      <Modal closeModal={() => setIsOpen(false)} isOpen={isOpen}>
+      <Dropdown 
+        title="Food menu" 
+        items={[
+          {id:1, link:"#!", text:"item 1"}, 
+          {id:2, link:"", text:"item 2"}, 
+          {id:3, link:"", text:"item 3"}
+        ]}
+        />
+      {/* <Modal closeModal={() => setIsOpen(false)} isOpen={isOpen}>
         <Modal.Header>
           <Modal.Title title="title"/>
           <Modal.CloseBtn />
@@ -77,7 +91,19 @@ const [isOpen, setIsOpen] = useState(true)
         <Modal.Content>
           Modal window
         </Modal.Content>
-      </Modal>
+      </Modal> */}
+      <Linkify>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Delectus aut repellat earum quod aliquid soluta ad,
+        rem recusandae quam https://github.com/ voluptatem doloribus praesentium distinctio 
+        deleniti dignissimos, cumque porro? Quasi, maiores nisi.</Linkify>
+      <Confirm 
+        lazy 
+        title="Do you want to use library?" 
+        classNameBody="container" 
+        getAnswer={onAnswer} 
+        closeWindow={() => setIsOpen(false)} 
+        isOpen={isOpen}/>
+      {/* <Accordion items={AccordionItems} toggle /> */}
     </div>
   );
 };

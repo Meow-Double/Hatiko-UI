@@ -11,7 +11,9 @@ const selectProps: SelectProps = {
   items: ['item 1', 'item 2', 'item 3', 'item 4']
 };
 
-const SelectTemplate: StoryObj<typeof Select> = { render: (args) => <Select {...args} /> };
+type Story = StoryObj<typeof Select>;
+
+const SelectTemplate: Story = { render: (args) => <Select {...args} /> };
 
 export const Default = { ...SelectTemplate };
 Default.args = selectProps;

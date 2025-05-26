@@ -32,8 +32,6 @@ height: 0;
 
  opacity: 0;
  pointer-events: none;
- 
-/* transform: translateY(-20px); */
 
  transition: all .2s ease;
  visibility: hidden;
@@ -41,7 +39,7 @@ height: 0;
 }
 
 .active_text{
- height: 90px;
+height: 100%;
  opacity: 1;
  pointer-events: visible;
  visibility: visible;

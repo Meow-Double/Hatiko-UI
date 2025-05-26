@@ -1,7 +1,7 @@
 import { ComponentProps, useId } from 'react';
 import clsx from 'clsx';
 
-import styles from './Texarea.module.css';
+import styles from './Textarea.module.css';
 
 type TextareaVariants = 'primary' | 'outline';
 

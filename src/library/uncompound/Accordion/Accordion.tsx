@@ -9,7 +9,7 @@ type AccodrionItemType = {
   id: number;
 };
 
-interface AccordionProps {
+export interface AccordionProps {
   items: AccodrionItemType[];
   classNameText?: string;
   classNameTitle?: string;
