@@ -5,6 +5,7 @@ module.exports = eslint({
   defaultRules: {
     'custom/one-component': 'off',
     'react/display-name': 'off',
-    'react-hooks/rules-of-hooks': 'off'
+    'react-hooks/rules-of-hooks': 'off',
+    'react/no-array-index-key': 'off'
   }
 });

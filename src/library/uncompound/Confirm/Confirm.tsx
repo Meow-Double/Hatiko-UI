@@ -15,6 +15,10 @@ export interface ConfirmProps {
   lazy?: boolean;
 }
 
+export const CONFIRM_TEST_IDS = {
+  OVERLAY: 'confirm-overlay'
+};
+
 export const Confirm = (props: ConfirmProps) => {
   const { title, classNameOverlay, classNameBody, getAnswer, isOpen, closeWindow, lazy } = props;
   const [isMounted, setIsMounted] = useState(false);
@@ -39,7 +43,10 @@ export const Confirm = (props: ConfirmProps) => {
 
   return (
     <Portal>
-      <div className={clsx(styles.overlay, classNameOverlay, { [styles.active]: isOpen })}>
+      <div
+        className={clsx(styles.overlay, classNameOverlay, { [styles.active]: isOpen })}
+        data-testid={CONFIRM_TEST_IDS.OVERLAY}
+      >
         <div className={clsx(styles.confirm, classNameBody)}>
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.buttons}>

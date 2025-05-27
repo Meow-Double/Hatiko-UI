@@ -101,6 +101,7 @@ A table of components is provided below. There are also designations such as:
 - In development 🛠️  
 - Covered by tests 🧪  
 - Stories 📕  
+- Old implementation 🗝️
 
 There are also options for compound and uncompound components. And availability of component histories and test coverage
 
@@ -108,9 +109,9 @@ There are also options for compound and uncompound components. And availability 
 | Component           | Status | Variants    |Availability|
 |---------------------|--------|-------------|------------|
 | **Button**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
-| **Input**          | ✅    |  `Uncompound` | 🧪📕|
+| **Input**          | ✅    |  `Uncompound` \| `Compound🛠️`| 🧪📕|
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
-| **Checkbox**          | ✅    |  `Uncompound` | 🧪📕|
+| **Checkbox**          | ✅    |  `Uncompound` \| `Compound🛠️` | 🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` |📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
@@ -118,17 +119,17 @@ There are also options for compound and uncompound components. And availability 
 | **Dropdown**          | ✅    |  `Uncompound` |📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
-| **Confirm**          | ✅    |  `Uncompound` |📕|
+| **Confirm**          | ✅    |  `Uncompound` |🧪📕|
 | **Accordion**          | ✅    |  `Uncompound` |📕 |
+| **Progressbar**          | ✅    |  `Uncompound 🗝️` |🧪📕|
+| **Range**          | ✅    |  `Uncompound` |📕 |
 | **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
 | **InputOTP**          | 🛠️    |  `Uncompound` | |
+| **Pagination**          | 🛠️    |  `Uncompound` | |
+| **ImagePopup**          | 🛠️    |  `Uncompound` | |
 | **Tooltip**          | ❌    |  `Uncompound` | |
 | **FileUpload**          | ❌    |  `Uncompound` | |
-| **ImagePopup**          | ❌    |  `Uncompound` | |
-| **Alert**          | ❌    |  `Uncompound` | |
 | **Toast**          | ❌    |  `Uncompound` | |
-| **Range**          | ❌    |  `Uncompound` | |
-| **Pagination**          | ❌    |  `Uncompound` | |
 
 </div>
 
@@ -462,7 +463,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Confirm
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -493,13 +494,117 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
   
 
+#### Accordion
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| items | `Array<{title:string, text:string, id:number \| string }>`   | true|
+| classNameText | `string`   | false|
+| classNameTitle | `string`   | false|
+| toggle | `boolean`   | false|
+
+</br>
+
+```
+      <Accordion 
+             items={[
+                {
+                id:1,
+                title:"What is hatiko-ui?",
+                text:"This is an unpopular ui component library for react, which is designed to make it easier to write your own ui components and speed up the development process."
+                },
+                {
+                id:2,
+                title:"Desserts",
+                text:"/menu/desserts"
+                }
+            ]}
+            classNameTitle="accrodion_class"
+            toggle
+      />
+```
+- <b>toggle</b> - allows you to not close previous accordion tabs that have been opened
+
+</br>
+  
+
+#### Progressbar
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| progress | `number`   | true|
+| title | `string`   | false|
+| displayProgress | `boolean`   | false|
+
+</br>
+
+
+
+```
+      <Progressbar
+            progress={45}
+            title="Test covered"
+            displayProgress
+      />
+```
+- <b>displayProgress</b> - displays progress percentages
+
+</br>
 
 </div>
 
 
 </br>
+
+
+#### Range
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+
+
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| defaultValue | `number`   | false|
+| min | `number`   | false|
+| max | `number`   | false|
+| step | `number`   | false|
+| getCurrentValue | `(value: number) => void`   | false|
+
+</br>
+
+
+```
+      <Progressbar
+            defaultValue={50}
+            step={10}
+            getCurrentValue={onGetValue}
+      />
+```
+- <b>getCurrentValue</b> - gets the current value of range
+- <b>step</b> - default:`1`
+- <b>min</b> - default:`1`
+- <b>max</b> - default:`100`
+
+</br>
+
+</div>
+
+
+</br>
+
 
 
 

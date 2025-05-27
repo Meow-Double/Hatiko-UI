@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Button, Linkify } from "./library/uncompound";
 import { Confirm } from "./library/uncompound/Confirm/Confirm";
 import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
+import { Progressbar } from "./library/uncompound/Progressbar/Progressbar";
+import { Range } from "./library/uncompound/Range/Range";
 
 
 // import { Button } from './library/compound/Button/Button';
@@ -37,10 +39,15 @@ import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
 const App = () => {
 
 const [isOpen, setIsOpen] = useState(false);
-
+const [value, setValue] = useState(0)
 
 const onAnswer = (answer: boolean) => {
   alert(answer)
+}
+
+
+const onGetValue = (value: number) => {
+setValue(value)
 }
 
   return (
@@ -104,6 +111,10 @@ const onAnswer = (answer: boolean) => {
         closeWindow={() => setIsOpen(false)} 
         isOpen={isOpen}/>
       {/* <Accordion items={AccordionItems} toggle /> */}
+      {/* <Pagination allPageCount={15} visibalPageCount={3}/> */}
+      <div style={{color:"#ddd", fontSize:"20px"}}>{value}</div>
+      <Range min={20} max={200} getCurrentValue={onGetValue}/>
+      <Progressbar progress={95} title="test titkle" displayProgress/>
     </div>
   );
 };

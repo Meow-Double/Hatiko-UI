@@ -6,11 +6,11 @@ import styles from './Accordion.module.css';
 type AccodrionItemType = {
   title: string;
   text: string;
-  id: number;
+  id: number | string;
 };
 
 export interface AccordionProps {
-  items: AccodrionItemType[];
+  items: Array<AccodrionItemType>;
   classNameText?: string;
   classNameTitle?: string;
   toggle?: boolean;
