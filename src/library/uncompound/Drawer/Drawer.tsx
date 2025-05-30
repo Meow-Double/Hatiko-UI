@@ -13,10 +13,16 @@ export interface DrawerProps {
     title?:ReactNode;
     closeBtn?:boolean;
     lazy?:boolean;
-      classNameOverlay?: string;
-  classNameBody?: string;
+    classNameOverlay?: string;
+    classNameBody?: string;
 }
 
+export const DRAWER_TEST_IDS = {
+      TITLE: 'drawer-title',
+  CLOSE_BUTTON: 'drawer-close_button',
+  OVERLAY: 'drawer-overlay',
+  BODY: 'drawer-body'
+}
 
 export const Drawer = (props: DrawerProps) => {
     const {
@@ -67,13 +73,22 @@ export const Drawer = (props: DrawerProps) => {
                 {[styles.active]:isOpen }
         )} 
         onClick={closeDrawer}
+        data-testid={DRAWER_TEST_IDS.OVERLAY}
         >
-      <div className={clsx(styles.body, classNameBody)} onClick={onClickContent}>
+      <div 
+        className={clsx(styles.body, classNameBody)} 
+        onClick={onClickContent} 
+        data-testid={DRAWER_TEST_IDS.BODY}
+        >
         {(!!title || closeBtn) && (
           <div className={styles.header}>
-            {!!title && <div>{title}</div>}
+            {!!title && <div data-testid={DRAWER_TEST_IDS.TITLE}>{title}</div>}
             {closeBtn && (
-            <button className={styles.close_btn} onClick={closeDrawer}>
+            <button 
+              className={styles.close_btn} 
+              onClick={closeDrawer} 
+              data-testid={DRAWER_TEST_IDS.CLOSE_BUTTON}
+            >
               <CloseIcon />
             </button>
               )}

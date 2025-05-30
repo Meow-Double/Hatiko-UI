@@ -3,9 +3,11 @@
 
 import { useState } from "react";
 
-import { Button, Linkify } from "./library/uncompound";
+import { Breadcrumbs, Button, Linkify } from "./library/uncompound";
 import { Confirm } from "./library/uncompound/Confirm/Confirm";
 import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
+import { FileUpload } from "./library/uncompound/FileUpload/FileUpload";
+import { Pagination } from "./library/uncompound/Pagination/Pagination";
 import { Progressbar } from "./library/uncompound/Progressbar/Progressbar";
 import { Range } from "./library/uncompound/Range/Range";
 
@@ -40,6 +42,8 @@ const App = () => {
 
 const [isOpen, setIsOpen] = useState(false);
 const [value, setValue] = useState(0)
+
+const [page, setPage] = useState(1)
 
 const onAnswer = (answer: boolean) => {
   alert(answer)
@@ -115,6 +119,10 @@ setValue(value)
       <div style={{color:"#ddd", fontSize:"20px"}}>{value}</div>
       <Range min={20} max={200} getCurrentValue={onGetValue}/>
       <Progressbar progress={95} title="test titkle" displayProgress/>
+
+      <Breadcrumbs items={[{label:"item 1", path:"/"}, {label:"item 2", path:"/"}]}/>
+      <Pagination page={page} totalPage={40} siblings={1} setPages={setPage}/>
+      <FileUpload getFiles={() => {}}/>
     </div>
   );
 };

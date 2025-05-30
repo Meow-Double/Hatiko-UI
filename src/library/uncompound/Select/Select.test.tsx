@@ -43,4 +43,3 @@ describe('Select', () => {
     expect(newActiveText).toHaveTextContent(selectProps.items[2]);
   });
 });
-

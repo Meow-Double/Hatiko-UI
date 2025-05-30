@@ -1,43 +1,67 @@
 
-import { useState } from 'react';
-import clsx from 'clsx';
+
+import clsx from "clsx";
+
+import { paginationRange } from '@/library/utils/pagination/paginationRange';
 
 import styles from './Pagination.module.css';
 
-interface PaginationProps {
-  visibalPageCount: number;
-  allPageCount: number;
+export interface PaginationProps {
+  page:number,
+  totalPage: number,
+  siblings:number
+  setPages:(value: number) => void
 }
 
-
 export const Pagination = (props: PaginationProps) => {
-    const {allPageCount, visibalPageCount} = props;
-    const [activePage, setActivePage] = useState(1);
+  const { page, siblings, totalPage, setPages} = props;
+
+  const array = paginationRange(totalPage, page, siblings)
 
 
-    const renderPageCount = Math.floor(allPageCount / visibalPageCount);
-
-
-
-    const onSetActivePage = (index: number) => {
-        setActivePage(index + 1);
+  const onChangePage = (value:string | number) => {
+    if(value === "&laquo;"){
+      setPages(1);
+    } else if(value === "&lsaquo;" && page > 1){
+      setPages(page - 1);
+    } else if(value === "&rsaquo;" && page < totalPage){
+        setPages(page + 1);
+    }else if(value === "&raquo;"){
+        setPages(totalPage);
+    }else if(typeof value === "number"){
+      setPages(value)
     }
+  }
 
-
-    return <div className={styles.pagination}>
-      {[...new Array(renderPageCount)].map((_, index) => 
+  return <ul className={styles.pagination}>
+    <li>
+      <button className={styles.item} onClick={() => onChangePage("&laquo;")}>
+        &laquo;
+      </button>
+    </li>
+    <li>
+      <button className={styles.item} onClick={() => onChangePage("&lsaquo;")}>
+        &lsaquo;
+      </button>
+    </li>
+    {array.map((item, index) => 
+      <li key={index}>
         <button 
-                key={index}
-                onClick={() => onSetActivePage(index)} 
-                className={clsx(styles.btn, {[styles.active]: activePage === index + 1})}
-            >
-          {index + 1}
-        </button>)}
-      {/* <span>...</span>
-            <button  \
-            className={clsx(styles.btn, 
-            {[styles.active]: activePage === fullSkipPageCount})}>
-                {fullSkipPageCount}
-            </button> */}
-    </div>
-};
+          onClick={() => onChangePage(item)} 
+          disabled={item === page} 
+          className={clsx(styles.item, {[styles.active]: page === item})}>
+          {item}
+        </button>
+      </li>)}
+    <li>
+      <button className={styles.item} onClick={() => onChangePage("&rsaquo;")}>
+        &rsaquo;
+      </button>
+    </li>
+    <li>
+      <button className={styles.item} onClick={() => onChangePage("&raquo;")}>
+        &raquo;
+      </button>
+    </li>
+  </ul>
+}

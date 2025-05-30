@@ -16,7 +16,7 @@ describe('Progressbar', () => {
   });
 
   test('should render title when provided', () => {
-    const { getByTestId } = render(<Progressbar {...progressbarProps} />);
+    const { getByTestId } = render(<Progressbar {...progressbarProps} title='progressbar_title' />);
 
     const title = getByTestId(PROGRESSBAR_TEST_IDS.TITLE_TEXT);
 
@@ -24,7 +24,7 @@ describe('Progressbar', () => {
   });
 
   test('should render progress text when provided', () => {
-    const { getByTestId } = render(<Progressbar {...progressbarProps} />);
+    const { getByTestId } = render(<Progressbar {...progressbarProps} displayProgress/>);
 
     const text = getByTestId(PROGRESSBAR_TEST_IDS.PROGRESS_TEXT);
 
@@ -32,7 +32,7 @@ describe('Progressbar', () => {
   });
 
   test('should render progress line when progress more zero', () => {
-    const { getByTestId } = render(<Progressbar {...progressbarProps} />);
+    const { getByTestId } = render(<Progressbar progress={0}/>);
 
     const line = getByTestId(PROGRESSBAR_TEST_IDS.PROGRESS_LINE);
 

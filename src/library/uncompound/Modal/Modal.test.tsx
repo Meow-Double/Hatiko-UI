@@ -14,9 +14,9 @@ describe('Modal', () => {
   test('should render modal when provided children', () => {
     const { getByTestId } = render(<Modal {...modalProps} />);
 
-    const modal = getByTestId(MODAL_TEST_IDS.OVERLAY);
+    const overlay = getByTestId(MODAL_TEST_IDS.OVERLAY);
 
-    expect(modal).toHaveTextContent(modalProps.children);
+    expect(overlay).toHaveTextContent(modalProps.children);
   });
 
   // test('should has active class when modal opened', () => {
@@ -42,9 +42,9 @@ describe('Modal', () => {
   test('should has className for body when provided', () => {
     const { getByTestId } = render(<Modal {...modalProps} classNameBody='body_class' />);
 
-    const modal = getByTestId(MODAL_TEST_IDS.BODY);
+    const modalBody = getByTestId(MODAL_TEST_IDS.BODY);
 
-    expect(modal).toHaveClass('body_class');
+    expect(modalBody).toHaveClass('body_class');
   });
 });
 

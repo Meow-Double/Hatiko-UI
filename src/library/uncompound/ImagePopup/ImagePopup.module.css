@@ -19,15 +19,57 @@
 
 
 .menu{
+    position: absolute;
+
     display: flex;
     align-items: center;
+    justify-content: center;
     gap:20px;
+   width: 600px;
+     height: 320px;
 }
 
+.test{
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+    /* top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%); */
+}
+.item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    /* opacity: 0;
+    visibility: hidden;
+    width: 0;
 
+
+    transform: translateX(-20px); */
+
+        transition: all .2s ease;
+}
 
 .img{
 width: 300px;
 height: 300px;
 object-fit: cover;
 }   
+
+
+.active{
+      width: 100%;
+       height: 100%;
+    opacity: 1;
+        visibility: visible;
+    /* opacity: 1;    
+    visibility: visible; 
+    width: 100%;
+    transform: translateX(0px); */
+}

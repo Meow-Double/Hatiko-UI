@@ -113,7 +113,7 @@ There are also options for compound and uncompound components. And availability 
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
 | **Checkbox**          | ✅    |  `Uncompound` \| `Compound🛠️` | 🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
-| **Drawer**          | ✅    |  `Uncompound` |📕 |
+| **Drawer**          | ✅    |  `Uncompound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
 | **Select**          | ✅    |  `Uncompound` |🧪📕 |
 | **Dropdown**          | ✅    |  `Uncompound` |📕|
@@ -121,14 +121,14 @@ There are also options for compound and uncompound components. And availability 
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
 | **Confirm**          | ✅    |  `Uncompound` |🧪📕|
 | **Accordion**          | ✅    |  `Uncompound` |📕 |
-| **Progressbar**          | ✅    |  `Uncompound 🗝️` |🧪📕|
+| **Progressbar**          | ✅    |  `Uncompound` |🧪📕|
 | **Range**          | ✅    |  `Uncompound` |📕 |
-| **Breadcrumbs**          | 🛠️    |  `Uncompound` | |
+| **Breadcrumbs**          | ✅    |  `Uncompound` |📕 |
+| **Pagination**          | ✅    |  `Uncompound` |📕 |
+| **FileUpload**          | ✅    |  `Uncompound` |📕|
 | **InputOTP**          | 🛠️    |  `Uncompound` | |
-| **Pagination**          | 🛠️    |  `Uncompound` | |
 | **ImagePopup**          | 🛠️    |  `Uncompound` | |
 | **Tooltip**          | ❌    |  `Uncompound` | |
-| **FileUpload**          | ❌    |  `Uncompound` | |
 | **Toast**          | ❌    |  `Uncompound` | |
 
 </div>
@@ -290,7 +290,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 #### Drawer
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
@@ -546,8 +546,6 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-
-
 ```
       <Progressbar
             progress={45}
@@ -572,9 +570,6 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 
-
-
-
 |  Props |    Types | Compulsory |
 |----------------|-----|---------------|
 | defaultValue | `number`   | false|
@@ -587,7 +582,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 ```
-      <Progressbar
+      <Range
             defaultValue={50}
             step={10}
             getCurrentValue={onGetValue}
@@ -600,6 +595,112 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
+
+
+
+#### Breadcrumbs
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| items | `Array<{label:string, path:string}>`   | true|
+| sign | `number`   | false|
+
+</br>
+
+
+```
+      <Breadcrumbs
+            items={[
+                  {
+                        label:"Menu",
+                        path:"/menu",
+                  },
+                  {
+                        label:"pizza",
+                        path:"/menu/pizza"
+                  }
+            ]}
+            sign="/"
+      />
+```
+- <b>sign</b> - default:`/`
+
+>ℹ️ INFO
+>For this component you need to install the library - `react-router-dom`
+
+</br>
+
+
+
+#### Pagination
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| page | `number`   | true|
+| totalPage | `number`   | true|
+| siblings | `number`   | true|
+| setPages | `(value: number) => void`   | true|
+
+</br>
+
+```
+      <Pagination
+            page={4}
+            totalPage={10}
+            siblings={1}
+            setPages={(value) => setValue(value)}
+      />
+```
+- <b>page</b> - сurrent page (active page)
+- <b>totalPage</b> - total number of pages 
+- <b>siblings</b> - range of visible pagination pages
+- <b>setPages</b> - a function that takes as an argument a value - the page that will be changed (most often useState)
+
+
+>ℹ️ INFO
+>Built-in utilities are used, don't forget to add them to the project when you use this component
+
+</br>
+
+#### FileUpload
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| getFiles | `number`   | true|
+| className | `number`   | false|
+| fileAccept | `number`   | false|
+
+
+
+</br>
+
+```
+      <FileUpload
+            className="upload_class"
+            fileAccept=".png, .jpg, .jpeg"
+            setPages={(files) => setFiles(files)}
+      />
+```
+- <b>fileAccept</b> - specify, comma separated, the file formats that will be allowed to be selected
+
+</br>
+
+
+
+
+
 </div>
 
 
@@ -610,7 +711,6 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 <div id="cli">
-
 
 ### 🚀 CLI 
 

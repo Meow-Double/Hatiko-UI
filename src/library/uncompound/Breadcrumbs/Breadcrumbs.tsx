@@ -1,51 +1,29 @@
 
-import { useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import clsx from 'clsx';
+
+import { ComponentProps } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './Breadcrumbs.module.css';
 
-interface BreadcrumbsProps {
-    sign?: string
+type BreadcrumbItemType = {
+  label: string;
+  path: string;
+};
+
+export interface BreadcrumbsProps extends ComponentProps<"a"> {
+  items:Array<BreadcrumbItemType>,
+  sign?: string
 }
 
-export const Breadcrumbs = (props: BreadcrumbsProps) => {
 
-    const {sign = "/"} = props;
+export const Breadcrumbs = (props:BreadcrumbsProps) => {
+  const {sign = "/", items, ...otherProps} = props;
 
-  const location = useLocation().pathname;
-
-  const locationArray = location.split("/");
-
-  const lastWord = locationArray[locationArray.length - 1];
-
-  const createLinkByItem = useCallback((item: string) => {
-    const donePath = [];
-
-    for(let i = 0; i < locationArray.length - 1; i++){
-
-        if(locationArray[i] === item || donePath?.includes(item)){
-            donePath.push(item)
-           break;
-        }
-
-        donePath.push(locationArray[i])
-    }
-
-    return donePath.join("/")
-  }, [locationArray])
-
-
-  return (
-    <ul className={styles.menu}>
-      {locationArray.map((item) => (
-        <li key={item} 
-        className={clsx(styles.item, {[styles.active]: item === lastWord})}>{
-            item === lastWord 
-              ? item 
-              : <Link to={createLinkByItem(item)}>{item + sign}</Link>
-        }</li>
-      ))}
+  return <nav>
+    <ul className={styles.list}>
+      {items.map((breadcrumb, index) => <li key={index}>
+        <Link to={breadcrumb.path} {...otherProps}>{breadcrumb.label} {sign}</Link>
+      </li>)}
     </ul>
-  );
-};
+  </nav>
+}

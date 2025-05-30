@@ -21,13 +21,13 @@ export interface DropdownProps {
   classNameShowBar?: string;
 }
 
-// export const SELECT_TEST_IDS = {
-//   ACTIVE_TEXT: 'select-active_text',
-//   SELECT: 'select',
-//   ACTIVE_BTN: 'select-active_btn',
-//   ITEM_BTN: 'select-item_btn',
-//   MENU: 'select-menu'
-// };
+export const DROPDOWN_TEST_IDS = {
+  ACTIVE_TEXT: 'dropdown-active_text',
+  DROPDOWN: 'dropdown',
+  ACTIVE_BTN: 'dropdown-active_btn',
+  ITEM_BTN: 'dropdown-item_btn',
+  MENU: 'dropdown-menu'
+};
 
 export const Dropdown = (props: DropdownProps) => {
   const { items, classNameMenu, classNameShowBar, title } = props;
@@ -37,15 +37,15 @@ export const Dropdown = (props: DropdownProps) => {
   
   return (
     <div className={styles.dropdown} 
-    // data-testid={SELECT_TEST_IDS.SELECT}
+    data-testid={DROPDOWN_TEST_IDS.DROPDOWN}
     >
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={clsx(styles.btn, styles.show_btn, classNameShowBar)}
-        // data-testid={SELECT_TEST_IDS.ACTIVE_BTN}
+        data-testid={DROPDOWN_TEST_IDS.ACTIVE_BTN}
       >
         <span 
-        // data-testid={SELECT_TEST_IDS.ACTIVE_TEXT}
+        data-testid={DROPDOWN_TEST_IDS.ACTIVE_TEXT}
         >{title}</span>
         <span className={clsx(styles.icon_block, {[styles.active_icon]: isOpen})}>
           <ArrowDownIcon className={styles.icon} />
@@ -53,7 +53,7 @@ export const Dropdown = (props: DropdownProps) => {
       </button>
       <ul
         className={clsx(styles.menu, classNameMenu, { [styles.active_menu]: isOpen })}
-        // data-testid={SELECT_TEST_IDS.MENU}
+        data-testid={DROPDOWN_TEST_IDS.MENU}
       >
         {items.map((item) => (
           <li key={item.id}>
