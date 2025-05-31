@@ -35,8 +35,8 @@
 
 </br>
 
->ℹ️ INFO  
-> The library is still in early access. We are improving it in every possible way, soon we will add tests and stories under the storybook
+> ℹ️ INFO  
+> The library is still in early access.
 
 </br>
 
@@ -126,10 +126,10 @@ There are also options for compound and uncompound components. And availability 
 | **Breadcrumbs**          | ✅    |  `Uncompound` |📕 |
 | **Pagination**          | ✅    |  `Uncompound` |📕 |
 | **FileUpload**          | ✅    |  `Uncompound` |📕|
-| **InputOTP**          | 🛠️    |  `Uncompound` | |
-| **ImagePopup**          | 🛠️    |  `Uncompound` | |
-| **Tooltip**          | ❌    |  `Uncompound` | |
-| **Toast**          | ❌    |  `Uncompound` | |
+| **ImagePopup**          | ✅    |  `Uncompound` |📕|
+| **Tooltip**          | ✅    |  `Uncompound` |📕|
+| **InputOTP**          | ✅    |  `Uncompound` |📕|
+| **Toast**          | ✅    |  `Uncompound` |📕|
 
 </div>
 
@@ -140,7 +140,9 @@ There are also options for compound and uncompound components. And availability 
 ### 📚 Examples
 Here are examples of using components with descriptions of their props. Each component has several use cases, depending on which props it contains.
 
-#### Button
+<details>
+</br>
+<summary>Button</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -157,7 +159,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Button
           variant='primary'
           onClick={onAddTask}
@@ -170,7 +172,12 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-#### Input
+</details>
+
+
+<details>
+</br>
+<summary>Input</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -186,7 +193,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Input
           variant='primary'
           onChange={handleValue}
@@ -196,8 +203,14 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
+</details>
 
-#### Textarea
+
+
+
+<details>
+</br>
+<summary>Textarea</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -212,7 +225,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Textarea
           variant='primary'
           onChange={handleValue}
@@ -222,9 +235,11 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
+</details>
 
-
-#### Checkbox
+<details>
+</br>
+<summary>Checkbox</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -239,7 +254,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Checkbox
           label={data.name}
           className="checkbox_custom"
@@ -250,9 +265,11 @@ Here are examples of using components with descriptions of their props. Each com
 - <b>getCheckboxState</b> - function that returns boolean type, depending on the checkbox activity
 
 </br>
+</details>
 
-
-#### Modal
+<details>
+</br>
+<summary>Modal</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -271,7 +288,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Modal
           isOpen={isOpenModal}
           closeModal={onCloseModal}
@@ -286,9 +303,11 @@ Here are examples of using components with descriptions of their props. Each com
 - <b>lazy</b> - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
 
 </br>
+</details>
 
-
-#### Drawer
+<details>
+</br>
+<summary>Drawer</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -307,7 +326,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Drawer
           isOpen={isOpenModal}
           closeDrawer={onCloseDrawer}
@@ -321,7 +340,12 @@ Here are examples of using components with descriptions of their props. Each com
 
 - <b>lazy</b> - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
 
-#### Badge
+</details>
+
+
+<details>
+</br>
+<summary>Badge</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -334,7 +358,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Badge
           text={data.orderStatus}
           variant="success"
@@ -343,8 +367,11 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
+</details>
 
-#### Select
+<details>
+</br>
+<summary>Select</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -359,7 +386,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Select
           items={["Item 1", "Item 2", "Item 3", "Item 4"]}
           classNameShowBar="select_bar"
@@ -368,9 +395,11 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
+</details>
 
-
-#### Dropdown
+<details>
+</br>
+<summary>Dropdown</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -385,7 +414,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Drowdown
           title="Food menu"
           items={[
@@ -405,8 +434,12 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
+</details>
 
-#### Typography
+
+<details>
+</br>
+<summary>Typography</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -421,7 +454,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Typography
           variant="bold_24"
           tag="h1"
@@ -432,12 +465,11 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
   
-</div>
+</details>
 
-
+<details>
 </br>
-
-#### Linkify
+<summary>Linkify</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -450,7 +482,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Linkify>
           Go to the website: https://github.com/Meow-Double
       </Linkify>
@@ -459,9 +491,12 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 </br>
+</details>
 
 
-#### Confirm
+<details>
+</br>
+<summary>Linkify</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -480,7 +515,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Confirm 
             title="Do you use a hatiko-ui?"
             isOpen={isOpen}
@@ -490,11 +525,14 @@ Here are examples of using components with descriptions of their props. Each com
       />
 ```
 
-
 </br>
   
+</details>
 
-#### Accordion
+
+<details>
+</br>
+<summary>Accordion</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -509,7 +547,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-```
+```javascript
       <Accordion 
              items={[
                 {
@@ -531,8 +569,12 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
   
+</details>
 
-#### Progressbar
+
+<details>
+</br>
+<summary>Progressbar</summary>
 
 ![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -546,7 +588,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-```
+```javascript
       <Progressbar
             progress={45}
             title="Test covered"
@@ -557,13 +599,12 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-</div>
+</details>
 
 
+<details>
 </br>
-
-
-#### Range
+<summary>Range</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -581,7 +622,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Range
             defaultValue={50}
             step={10}
@@ -595,10 +636,11 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
+</details>
 
-
-
-#### Breadcrumbs
+<details>
+</br>
+<summary>Breadcrumbs</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -612,7 +654,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 
 
-```
+```javascript
       <Breadcrumbs
             items={[
                   {
@@ -629,14 +671,17 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 - <b>sign</b> - default:`/`
 
->ℹ️ INFO
->For this component you need to install the library - `react-router-dom`
+> ℹ️ INFO
+> For this component you need to install the library `react-router-dom`
 
 </br>
+</details>
 
 
 
-#### Pagination
+<details>
+</br>
+<summary>Pagination</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -651,7 +696,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-```
+```javascript
       <Pagination
             page={4}
             totalPage={10}
@@ -665,12 +710,17 @@ Here are examples of using components with descriptions of their props. Each com
 - <b>setPages</b> - a function that takes as an argument a value - the page that will be changed (most often useState)
 
 
->ℹ️ INFO
->Built-in utilities are used, don't forget to add them to the project when you use this component
+> ℹ️ INFO  
+> Built-in utilities are used, don't forget to add them to the project when you use this component
 
 </br>
 
-#### FileUpload
+</details>
+
+
+<details>
+</br>
+<summary>FileUpload</summary>
 
 ![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
@@ -686,7 +736,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-```
+```javascript
       <FileUpload
             className="upload_class"
             fileAccept=".png, .jpg, .jpeg"
@@ -697,6 +747,160 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
+</details>
+
+
+<details>
+</br>
+<summary>ImagePopup</summary>
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| images | `string[]`   | true|
+| isOpen | `boolean`   | true|
+| closePopup | `() => void`   | true|
+| classNameOverlay | `string`   | false|
+| classNameImages | `string`   | false|
+
+</br>
+
+```javascript
+      <ImagePopup
+            images=[ImageFirst, ImageSecond, ImageThird]
+            isOpen={isOpen}
+            closePopup={onClosePopup}
+            classNameImages="images_class"
+      />
+```
+
+</br>
+
+</details>
+
+
+<details>
+</br>
+<summary>Tooltip</summary>
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReacNode`   | true|
+| title | `string`   | true|
+| className | `() => void`   | false|
+
+</br>
+
+```javascript
+      <Tooltip
+            title="It's a tooltip component"
+            isOpen={isOpen}
+      >
+            Tooltip component
+      </Tooltip>
+```
+
+</br>
+
+</details>
+
+
+<details>
+</br>
+<summary>InputOTP</summary>
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| getValue | `(value: string) => void`   | true|
+| length | `number`   | false|
+| className | `string`   | false|
+
+
+</br>
+
+```javascript
+      <InputOTP
+            className="input-otp_class"
+            getValue={getInputValue}
+            length={6}
+      />
+```
+
+</br>
+
+</details>
+
+
+<details>
+</br>
+<summary>Toast</summary>
+
+![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| toastList | `Array<ToastListTypes>`   | true|
+| clearToasts | `(toasts: ToastListTypes[]) => void`   | true|
+| position | `PositionTypes`   | false|
+| durationDelete | `number`   | false|
+
+<b>Types</b>
+
+```typescript
+      type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
+
+      type PositionTypes = 'bottom-right';
+
+      type ToastListTypes = {
+            id: number;
+            title?: string;
+            description: string;
+            variant: ToastVariants;
+      };
+
+```
+
+</br>
+
+<b>Toast</b>
+
+```javascript
+      <Toast
+            toastList={[{
+                  id:1,
+                  variant:"success",
+                  description:"This is a toast component"
+            }]}
+            clearToasts={getInputValue}
+            durationDelete={3000}
+      />
+```
+
+</br>
+- <b>durationDelete</b> - The default will be 2000 milliseconds
+</details>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -705,10 +909,6 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 </br>
-
-
-
-
 
 <div id="cli">
 
@@ -719,11 +919,12 @@ Here are examples of using components with descriptions of their props. Each com
 - `add <...arguments>` - Adds the components specified as arguments to the catalog
 
 <b>Examples</b>
-```
+
+```javascript
 hatiko-ui add Button Input Select
 ```
 
--Always with the components will come the styles folder, which contains the main styles for the components
+- Always with the components will come the styles folder, which contains the main styles for the components
 
 >ℹ️ INFO
 >Depending on the specified components, an icons folder may be created that contains the desired icons
@@ -737,6 +938,7 @@ Contains three main folders:
 - `icons` – contains files with icons and `index.ts` to export them.
 
 ```plaintext
+
 components/
 │── Button/
 │   ├── Button.tsx

@@ -1,15 +1,21 @@
+import { ReactNode } from 'react';
+import clsx from 'clsx';
+
 import styles from './Tooltip.module.css';
 
-interface TooltipProps {
+export interface TooltipProps {
   title: string;
+  children: ReactNode;
+  className?: string;
 }
 
 export const Tooltip = (props: TooltipProps) => {
-  const { title } = props;
+  const { title, children, className } = props;
 
   return (
-    <div className={styles.tooltip}>
+    <div className={clsx(styles.tooltip, className)}>
       <span className={styles.title}>{title}</span>
+      <div>{children}</div>
     </div>
   );
 };

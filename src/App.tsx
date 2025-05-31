@@ -3,15 +3,19 @@
 
 import { useState } from "react";
 
+import Image1 from "./assets/images/image-1.jpg"
+import Image2 from "./assets/images/image-2.jpg"
+import Image3 from "./assets/images/image-3.jpg"
 import { Breadcrumbs, Button, Linkify } from "./library/uncompound";
-import { Confirm } from "./library/uncompound/Confirm/Confirm";
 import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
 import { FileUpload } from "./library/uncompound/FileUpload/FileUpload";
+import { ImagePopup } from "./library/uncompound/ImagePopup/ImagePopup";
+import { InputOTP } from "./library/uncompound/InputOTP/InputOTP";
 import { Pagination } from "./library/uncompound/Pagination/Pagination";
 import { Progressbar } from "./library/uncompound/Progressbar/Progressbar";
 import { Range } from "./library/uncompound/Range/Range";
-
-
+import { Toast, ToastListTypes } from "./library/uncompound/Toast/Toast";
+import { Tooltip } from "./library/uncompound/Tooltip/Tooltip";
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -45,18 +49,57 @@ const [value, setValue] = useState(0)
 
 const [page, setPage] = useState(1)
 
-const onAnswer = (answer: boolean) => {
-  alert(answer)
-}
-
 
 const onGetValue = (value: number) => {
 setValue(value)
 }
 
+const [list, setList] = useState<ToastListTypes[]>([])
+
+// const showToast = () => {
+//   toastProperties = {
+//     id:1,
+//     title:"success",
+//     description:"This is a success toast component",
+//     variant:"success"
+//   }
+// setList([toastProperties, toastProperties])
+// }
+
+const onClickToast = () => {
+  const list:ToastListTypes[] = [
+    {
+      id:1,
+      variant:"success",
+      description:"Hello world",
+      title:"test"
+  },
+      {
+      id:2,
+      variant:"danger",
+      description:"Hello world",
+      title:"test"
+  },
+      {
+      id:3,
+      variant:"info",
+      description:"Hello world",
+      title:"test"
+  },
+      {
+      id:4,
+      variant:"warning",
+      description:"Hello world",
+  },
+  ]
+
+  setList(list)
+}
+
   return (
     <div className='flex_block'>
       <Button variant="primary" onClick={() => setIsOpen(true)}>onClick</Button>
+      <Button variant="primary" onClick={onClickToast}>onClick</Button>
       {/* <Button variant='outline' onClick={() => setIsOpen(true)}>
         <Typogarphy tag='h1' variant='regular_16'>
           Click me
@@ -107,22 +150,31 @@ setValue(value)
         adipisicing elit. Delectus aut repellat earum quod aliquid soluta ad,
         rem recusandae quam https://github.com/ voluptatem doloribus praesentium distinctio 
         deleniti dignissimos, cumque porro? Quasi, maiores nisi.</Linkify>
-      <Confirm 
+      {/* <Confirm 
         lazy 
         title="Do you want to use library?" 
         classNameBody="container" 
         getAnswer={onAnswer} 
         closeWindow={() => setIsOpen(false)} 
-        isOpen={isOpen}/>
+        isOpen={isOpen}/> */}
       {/* <Accordion items={AccordionItems} toggle /> */}
       {/* <Pagination allPageCount={15} visibalPageCount={3}/> */}
       <div style={{color:"#ddd", fontSize:"20px"}}>{value}</div>
       <Range min={20} max={200} getCurrentValue={onGetValue}/>
       <Progressbar progress={95} title="test titkle" displayProgress/>
-
+      <ImagePopup 
+        isOpen={isOpen} 
+        closePopup={() => setIsOpen(false)} 
+        images={[Image1,Image2,Image3 ]}
+      />
       <Breadcrumbs items={[{label:"item 1", path:"/"}, {label:"item 2", path:"/"}]}/>
       <Pagination page={page} totalPage={40} siblings={1} setPages={setPage}/>
       <FileUpload getFiles={() => {}}/>
+      <Tooltip title="this is test tooltip">
+        Hello worl
+      </Tooltip>
+      <InputOTP getValue={() => {}} />
+      <Toast toastList={list} position="bottom-right" clearToasts={setList}/>
     </div>
   );
 };

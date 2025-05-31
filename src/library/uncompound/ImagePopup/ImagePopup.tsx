@@ -1,56 +1,59 @@
+
 import { useState } from 'react';
 import clsx from 'clsx';
 
 import styles from './ImagePopup.module.css';
 
-type ImageTypes = {
-  id: number | string;
-  url: string;
-};
-
-interface ImagePopupProps {
-  images: ImageTypes[];
+export interface ImagePopupProps {
+  images: string[];
+  isOpen:boolean;
+  closePopup: () => void;
+  classNameOverlay?:string;
+  classNameImages?:string;
 }
 
 export const ImagePopup = (props: ImagePopupProps) => {
-  const { images } = props;
-  const [activeImage] = useState<ImageTypes>(images[0]);
+  const {images, classNameOverlay, classNameImages, isOpen, closePopup} = props;
 
-  // const onNextImage = () => {
-  //   const currentIndexImage = images.findIndex((image) => image === activeImage);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  //   if (images.length - 1 <= currentIndexImage) {
-  //     setActiveImage(images[0]);
-  //   } else {
-  //     setActiveImage(images[currentIndexImage + 1]);
-  //   }
-  // };
+  const onPrevImage = (e:React.MouseEvent) => {
+      e.stopPropagation();
+    if(currentIndex <= 0){
+      setCurrentIndex(images.length - 1)
+    }else{
+      setCurrentIndex(prev => prev - 1)
+    }
+  }
 
-  // const onPrevImage = () => {
-  //   const currentIndexImage = images.findIndex((image) => image === activeImage);
+  const onNextIndex = (e:React.MouseEvent) => {
+      e.stopPropagation();
+      if(currentIndex >= images.length - 1){
+      setCurrentIndex(0)
+    }else{
+      setCurrentIndex(prev => prev + 1)
+    }
+  }
 
-  //   if (currentIndexImage <= 0) {
-  //     setActiveImage(images[images.length - 1]);
-  //   } else {
-  //     setActiveImage(images[currentIndexImage - 1]);
-  //   }
-  // };
+  const onImageClick = (e:React.MouseEvent) => {
+    e.stopPropagation();
+  }
 
-  return (
-    <div className={styles.overlay}>
-      {/* <button onClick={onPrevImage}>prev</button> */}
-      <ul className={styles.menu}>
-        {images.map((image) => (
-          <div className={styles.test}   key={image.id}>
-            <li
-              className={clsx(styles.item, { [styles.active]: activeImage.id === image.id })}
-            >
-              <img className={styles.img} src={image.url} alt='picture' />
-            </li>
-          </div>
-        ))}
-      </ul>
-      {/* <button onClick={onNextImage}>next</button> */}
+  return <div 
+    className={clsx(styles.overlay, classNameOverlay, {[styles.active_overlay]: isOpen})} 
+    onClick={closePopup}
+  >
+    <button className={styles.btn} onClick={onPrevImage}>prev</button>
+    <div className={clsx(styles.images, classNameImages)} onClick={onImageClick}>
+      {images.map((src, index) => (
+        <img 
+              className={clsx(styles.img, {[styles.active]: index ===   currentIndex})}
+              alt={`slide-${index}`} 
+              src={src} 
+              key={index} 
+            />
+          ))}
     </div>
-  );
+    <button className={styles.btn} onClick={onNextIndex}>next</button>
+  </div>
 };

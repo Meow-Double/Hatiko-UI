@@ -7,6 +7,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #14111d;
+  font-family: Helvetica, sans-serif;
 }
 
 .flex_block {

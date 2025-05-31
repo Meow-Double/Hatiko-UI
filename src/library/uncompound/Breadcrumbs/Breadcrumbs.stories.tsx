@@ -21,7 +21,6 @@ const breadcrumbsProps: BreadcrumbsProps = {
       path: '/'
     }
   ],
-  tag: 'Link',
 };
 
 type Story = StoryObj<typeof Breadcrumbs>;

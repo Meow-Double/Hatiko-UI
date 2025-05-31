@@ -22,7 +22,11 @@ export const Breadcrumbs = (props:BreadcrumbsProps) => {
   return <nav>
     <ul className={styles.list}>
       {items.map((breadcrumb, index) => <li key={index}>
-        <Link to={breadcrumb.path} {...otherProps}>{breadcrumb.label} {sign}</Link>
+        {index === items.length - 1 
+          ? <span className={styles.last_link}>{breadcrumb.label}</span>
+          : <Link className={styles.link} to={breadcrumb.path} {...otherProps}>{breadcrumb.label} 
+            {sign}
+          </Link>}
       </li>)}
     </ul>
   </nav>

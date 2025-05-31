@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.tsx';
 
-import './styles/index.css';
+import './assets/styles/index.css';
 import './library/assets/styles/index.css';
 
 const element = document.getElementById('root') as HTMLElement;

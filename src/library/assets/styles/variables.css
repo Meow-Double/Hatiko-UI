@@ -1,10 +1,17 @@
 :root {
 
   /* ----Colors---- */
-  --primary-color: #69974e;
+  --primary-color: #64959E;
+  --primary-light-color: #72a6af;
+  --primary-hover-color:#84c0cb;
+  --primary-disabled-color: #8fcad4;
+
+  /* --primary-color: #69974e;
   --primary-light-color: #75a857;
   --primary-hover-color:#90b978;
-  --primary-disabled-color: #90b978;
+  --primary-disabled-color: #90b978; */
+
+  
   --white-color: #ffffff;
   --text-color: rgba(223 216 216);
   --overlay-color:rgba(0 0 0 / 0.6);

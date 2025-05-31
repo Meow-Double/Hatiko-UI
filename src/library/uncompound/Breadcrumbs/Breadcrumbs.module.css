@@ -1,13 +1,12 @@
 
 .list{
-    display: flex;
+    display: flex;width: 100%;
     align-items: center;
-    gap: 4px;
-  width: 100%;
-    overflow-x: auto;
 
       color:var(--white-color);
-      font-size: 16px;width: 100%;
+      font-size: 16px;
+    gap: 4px;
+    overflow-x: auto;
 
 
       white-space: nowrap;
@@ -17,7 +16,11 @@
   color:var(--primary-light-color)
 } */
 
-.active_link{ 
+.link{
+    width:max-content; 
     color:var(--primary-color);
-    width:max-content;
+}
+
+.last_link{
+  color: var(--white-color);
 }

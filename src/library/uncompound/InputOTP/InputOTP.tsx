@@ -1,68 +1,62 @@
-
-
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 import styles from './InputOTP.module.css';
 
-interface InputOTPProps {
-  getValue: (value: string) => void
+export interface InputOTPProps {
+  getValue: (value: string) => void;
+  length?: number;
+  className?: string;
 }
 
-export const InputOTP = (props:InputOTPProps ) => {
-  const {getValue} = props;
+export const InputOTP = (props: InputOTPProps) => {
+  const { getValue, length = 4, className } = props;
 
-  const [finalResult, setFinalResult] = useState("");
+  const [finalResult, setFinalResult] = useState('');
 
-
-  const handleInput = (e: FormEvent<HTMLInputElement>) => {
-
-    if(e.target.value.length === 1){
-       const nextSibling = e.target.nextElementSibling;
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value.length === 1) {
+      const nextSibling = e.target.nextElementSibling as HTMLInputElement;
       if (nextSibling) {
-        setFinalResult(e.target.value)
+        setFinalResult(e.target.value);
         nextSibling.focus();
       }
     }
 
-    // if(finalResult.length >= 4){
-    //  getValue(finalResult.join(""))
-    // }
+    setFinalResult((prev) => prev + e.target.value);
 
-     setFinalResult((prev) => prev + e.target.value);
-
-    if(finalResult.length >= 3){
+    if (finalResult.length >= 3) {
       getValue(finalResult);
     }
-  }
+  };
 
-  const handleKeyUP = (e: KeyboardEvent) => {
-    if(e.code === "Backspace" || e.which === 8){
-            if (e.target.value.length === 0) {
-                 const prevSibling = e.target.previousElementSibling;
-                   if (prevSibling) {
-            prevSibling.focus();
-            prevSibling.select();
+  const handleKeyUP = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+
+    if (e.code === 'Backspace' || e.which === 8) {
+      if (target.value.length === 0) {
+        const prevSibling = target.previousElementSibling as HTMLInputElement;
+        if (prevSibling) {
+          prevSibling.focus();
+          prevSibling.select();
         }
-            }
+      }
     }
-      
-  }
-
+  };
 
   return (
     <div className={styles.menu}>
-      <input data-index={1}   type="text"  
-      onInput={handleInput} onKeyUp={handleKeyUP}   
-      inputMode="numeric"    maxLength={1} className={styles.otp_item}/>
-      <input data-index={2}     type="text"  
-      onKeyUp={handleKeyUP}  onInput={handleInput}       
-      inputMode="numeric"   maxLength={1} className={styles.otp_item}/>
-      <input data-index={3}  type="text"  
-      onKeyUp={handleKeyUP}   onInput={handleInput}       
-      inputMode="numeric"   maxLength={1} className={styles.otp_item}/>
-      <input data-index={4}    type="text"  
-      onKeyUp={handleKeyUP}  onInput={handleInput}      
-       inputMode="numeric"   maxLength={1} className={styles.otp_item}/>
+      {[...new Array(length)].map((_, index) => (
+        <input
+          key={index}
+          className={clsx(styles.otp_item, className)}
+          type='text'
+          onInput={handleInput}
+          onKeyUp={handleKeyUP}
+          inputMode='numeric'
+          maxLength={1}
+        />
+      ))}
     </div>
   );
 };
