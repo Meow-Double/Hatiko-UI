@@ -109,9 +109,9 @@ There are also options for compound and uncompound components. And availability 
 | Component           | Status | Variants    |Availability|
 |---------------------|--------|-------------|------------|
 | **Button**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
-| **Input**          | ✅    |  `Uncompound` \| `Compound🛠️`| 🧪📕|
+| **Input**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
-| **Checkbox**          | ✅    |  `Uncompound` \| `Compound🛠️` | 🧪📕|
+| **Checkbox**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|

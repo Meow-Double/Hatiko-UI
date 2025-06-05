@@ -1,31 +1,3 @@
-/* .tooltip{
-    position: relative;
-
-
-    width: max-content;
-    padding-left: 16px;
-   
-    color:var(--white-color);
-}
-
-.title{    
- padding: 8px 12px;
- border-radius: 4px;
- background-color: var(--primary-color);
-}
-
-.tooltip:before{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-  width: 0;
-  height: 0;
-  border: solid 8px transparent;
-  border-right: solid 8px var(--primary-color);
-    content: "";
-} */
-
 .tooltip{
   position: relative;
   color:var(--white-color)

@@ -6,6 +6,8 @@ import { useState } from "react";
 import Image1 from "./assets/images/image-1.jpg"
 import Image2 from "./assets/images/image-2.jpg"
 import Image3 from "./assets/images/image-3.jpg"
+import { Checkbox, CheckboxLabel, CheckboxText } from "./library/compound/Checkbox/Checkbox";
+import { Input, InputErrorText, InputLabel, InputText } from "./library/compound/Input/Input";
 import { Breadcrumbs, Button, Linkify } from "./library/uncompound";
 import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
 import { FileUpload } from "./library/uncompound/FileUpload/FileUpload";
@@ -137,6 +139,15 @@ const onClickToast = () => {
           {id:3, link:"", text:"item 3"}
         ]}
         />
+      <InputLabel>
+        <InputText text="test text"/>
+        <Input variant="primary" error/>
+        <InputErrorText text="this field is required!"/>
+      </InputLabel>
+      <CheckboxLabel>
+        <Checkbox getCheckboxState={(value) => alert(value)}/>
+        <CheckboxText text="hello"/>
+      </CheckboxLabel>
       {/* <Modal closeModal={() => setIsOpen(false)} isOpen={isOpen}>
         <Modal.Header>
           <Modal.Title title="title"/>
