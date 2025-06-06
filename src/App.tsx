@@ -3,21 +3,21 @@
 
 import { useState } from "react";
 
-import Image1 from "./assets/images/image-1.jpg"
-import Image2 from "./assets/images/image-2.jpg"
-import Image3 from "./assets/images/image-3.jpg"
 import { Checkbox, CheckboxLabel, CheckboxText } from "./library/compound/Checkbox/Checkbox";
+import { 
+  Drawer, 
+  DrawerCloseBtn, 
+  DrawerContent, 
+  DrawerHeader, 
+  DrawerTitle } 
+  from "./library/compound/Drawer/Drawer";
+import { Dropdown, DropdownItem } from "./library/compound/Dropdown/Dropdown";
 import { Input, InputErrorText, InputLabel, InputText } from "./library/compound/Input/Input";
-import { Breadcrumbs, Button, Linkify } from "./library/uncompound";
-import { Dropdown } from "./library/uncompound/Dropdown/Dropdown";
-import { FileUpload } from "./library/uncompound/FileUpload/FileUpload";
-import { ImagePopup } from "./library/uncompound/ImagePopup/ImagePopup";
-import { InputOTP } from "./library/uncompound/InputOTP/InputOTP";
-import { Pagination } from "./library/uncompound/Pagination/Pagination";
+import { SelectItem,SelectWraper } from "./library/compound/Select/Select";
+import {  Button, Linkify } from "./library/uncompound";
 import { Progressbar } from "./library/uncompound/Progressbar/Progressbar";
 import { Range } from "./library/uncompound/Range/Range";
-import { Toast, ToastListTypes } from "./library/uncompound/Toast/Toast";
-import { Tooltip } from "./library/uncompound/Tooltip/Tooltip";
+import {  ToastListTypes } from "./library/uncompound/Toast/Toast";
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -49,14 +49,12 @@ const App = () => {
 const [isOpen, setIsOpen] = useState(false);
 const [value, setValue] = useState(0)
 
-const [page, setPage] = useState(1)
 
 
 const onGetValue = (value: number) => {
 setValue(value)
 }
 
-const [list, setList] = useState<ToastListTypes[]>([])
 
 // const showToast = () => {
 //   toastProperties = {
@@ -102,6 +100,15 @@ const onClickToast = () => {
     <div className='flex_block'>
       <Button variant="primary" onClick={() => setIsOpen(true)}>onClick</Button>
       <Button variant="primary" onClick={onClickToast}>onClick</Button>
+      <Drawer isOpen={isOpen} closeDrawer={() => setIsOpen(false)}>
+        <DrawerHeader>
+          <DrawerTitle title="Drawer Compund"/>
+          <DrawerCloseBtn />
+        </DrawerHeader>
+        <DrawerContent>
+          Drawer Content
+        </DrawerContent>
+      </Drawer>
       {/* <Button variant='outline' onClick={() => setIsOpen(true)}>
         <Typogarphy tag='h1' variant='regular_16'>
           Click me
@@ -130,15 +137,7 @@ const onClickToast = () => {
         <Textarea.Label label="test"/>
         <Textarea variant="primary"/>
         <Textarea.Error error="error"/>
-      </Textarea.Wrapper> */}
-      <Dropdown 
-        title="Food menu" 
-        items={[
-          {id:1, link:"#!", text:"item 1"}, 
-          {id:2, link:"", text:"item 2"}, 
-          {id:3, link:"", text:"item 3"}
-        ]}
-        />
+      </Textarea.Wrapper> */}~
       <InputLabel>
         <InputText text="test text"/>
         <Input variant="primary" error/>
@@ -173,19 +172,29 @@ const onClickToast = () => {
       <div style={{color:"#ddd", fontSize:"20px"}}>{value}</div>
       <Range min={20} max={200} getCurrentValue={onGetValue}/>
       <Progressbar progress={95} title="test titkle" displayProgress/>
-      <ImagePopup 
+      {/* <ImagePopup 
         isOpen={isOpen} 
         closePopup={() => setIsOpen(false)} 
         images={[Image1,Image2,Image3 ]}
-      />
-      <Breadcrumbs items={[{label:"item 1", path:"/"}, {label:"item 2", path:"/"}]}/>
+      /> */}
+      {/* <Breadcrumbs items={[{label:"item 1", path:"/"}, {label:"item 2", path:"/"}]}/>
       <Pagination page={page} totalPage={40} siblings={1} setPages={setPage}/>
       <FileUpload getFiles={() => {}}/>
       <Tooltip title="this is test tooltip">
         Hello worl
       </Tooltip>
       <InputOTP getValue={() => {}} />
-      <Toast toastList={list} position="bottom-right" clearToasts={setList}/>
+      <Toast toastList={list} position="bottom_right" clearToasts={setList}/> */}
+      <SelectWraper>
+        <SelectItem>Item 1</SelectItem>
+        <SelectItem>Item 2</SelectItem>
+        <SelectItem>Item 3</SelectItem>
+      </SelectWraper>
+      <Dropdown title="menu list">
+        <DropdownItem path="#!" text="item 1"/>
+        <DropdownItem path="#!" text="item 2"/>
+        <DropdownItem path="#!" text="item 3"/>
+      </Dropdown>
     </div>
   );
 };

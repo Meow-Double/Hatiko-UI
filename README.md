@@ -113,13 +113,13 @@ There are also options for compound and uncompound components. And availability 
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
 | **Checkbox**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
-| **Drawer**          | ✅    |  `Uncompound` |🧪📕 |
+| **Drawer**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
-| **Select**          | ✅    |  `Uncompound` |🧪📕 |
-| **Dropdown**          | ✅    |  `Uncompound` |📕|
+| **Select**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
+| **Dropdown**          | ✅    |  `Uncompound`\| `Compound` |📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
-| **Confirm**          | ✅    |  `Uncompound` |🧪📕|
+| **Confirm**          | ✅    |  `Uncompound`\| `Compound🛠️` |🧪📕|
 | **Accordion**          | ✅    |  `Uncompound` |📕 |
 | **Progressbar**          | ✅    |  `Uncompound` |🧪📕|
 | **Range**          | ✅    |  `Uncompound` |📕 |
