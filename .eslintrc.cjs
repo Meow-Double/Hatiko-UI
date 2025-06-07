@@ -6,6 +6,6 @@ module.exports = eslint({
     'custom/one-component': 'off',
     'react/display-name': 'off',
     'react-hooks/rules-of-hooks': 'off',
-    'react/no-array-index-key': 'off'
+    'react/no-array-index-key': 'off',
   }
 });

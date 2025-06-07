@@ -49,7 +49,7 @@ height: 100%;
 
 .text{ 
     display: inline-block;
+    width: 100%;
     padding: 12px;
     margin-bottom: 4px;
-    background-color: var(--primary-color);
 }

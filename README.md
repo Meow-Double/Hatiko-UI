@@ -115,16 +115,16 @@ There are also options for compound and uncompound components. And availability 
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
-| **Select**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
-| **Dropdown**          | ✅    |  `Uncompound`\| `Compound` |📕|
+| **Select**          | ✅    |  `Uncompound` \| `Compound🗝️` |🧪📕 |
+| **Dropdown**          | ✅    |  `Uncompound`\| `Compound🗝️` |📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
-| **Confirm**          | ✅    |  `Uncompound`\| `Compound🛠️` |🧪📕|
-| **Accordion**          | ✅    |  `Uncompound` |📕 |
-| **Progressbar**          | ✅    |  `Uncompound` |🧪📕|
-| **Range**          | ✅    |  `Uncompound` |📕 |
-| **Breadcrumbs**          | ✅    |  `Uncompound` |📕 |
-| **Pagination**          | ✅    |  `Uncompound` |📕 |
+| **Confirm**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
+| **Accordion**          | ✅    |  `Uncompound`\| `Compound` |📕 |
+| **Progressbar**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
+| **Range**          | ✅    |  `Uncompound`\| `Compound🗝️` |📕 |
+| **Breadcrumbs**          | ✅    |  `Uncompound`\| `Compound` |📕 |
+| **Pagination**          | ✅    |  `Uncompound`\| `Compound` |📕 |
 | **FileUpload**          | ✅    |  `Uncompound` |📕|
 | **ImagePopup**          | ✅    |  `Uncompound` |📕|
 | **Tooltip**          | ✅    |  `Uncompound` |📕|

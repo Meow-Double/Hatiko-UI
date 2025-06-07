@@ -13,11 +13,10 @@ import {
   from "./library/compound/Drawer/Drawer";
 import { Dropdown, DropdownItem } from "./library/compound/Dropdown/Dropdown";
 import { Input, InputErrorText, InputLabel, InputText } from "./library/compound/Input/Input";
+// import { Range } from "./library/uncompound/Range/Range";
 import { SelectItem,SelectWraper } from "./library/compound/Select/Select";
 import {  Button, Linkify } from "./library/uncompound";
-import { Progressbar } from "./library/uncompound/Progressbar/Progressbar";
-import { Range } from "./library/uncompound/Range/Range";
-import {  ToastListTypes } from "./library/uncompound/Toast/Toast";
+
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -47,13 +46,9 @@ import {  ToastListTypes } from "./library/uncompound/Toast/Toast";
 const App = () => {
 
 const [isOpen, setIsOpen] = useState(false);
-const [value, setValue] = useState(0)
+const [value] = useState(0)
 
 
-
-const onGetValue = (value: number) => {
-setValue(value)
-}
 
 
 // const showToast = () => {
@@ -67,34 +62,9 @@ setValue(value)
 // }
 
 const onClickToast = () => {
-  const list:ToastListTypes[] = [
-    {
-      id:1,
-      variant:"success",
-      description:"Hello world",
-      title:"test"
-  },
-      {
-      id:2,
-      variant:"danger",
-      description:"Hello world",
-      title:"test"
-  },
-      {
-      id:3,
-      variant:"info",
-      description:"Hello world",
-      title:"test"
-  },
-      {
-      id:4,
-      variant:"warning",
-      description:"Hello world",
-  },
-  ]
-
-  setList(list)
+  
 }
+
 
   return (
     <div className='flex_block'>
@@ -170,8 +140,8 @@ const onClickToast = () => {
       {/* <Accordion items={AccordionItems} toggle /> */}
       {/* <Pagination allPageCount={15} visibalPageCount={3}/> */}
       <div style={{color:"#ddd", fontSize:"20px"}}>{value}</div>
-      <Range min={20} max={200} getCurrentValue={onGetValue}/>
-      <Progressbar progress={95} title="test titkle" displayProgress/>
+      {/* <Range min={20} max={200} getCurrentValue={onGetValue}/>
+      <Progressbar progress={95} title="test titkle" displayProgress/> */}
       {/* <ImagePopup 
         isOpen={isOpen} 
         closePopup={() => setIsOpen(false)} 
@@ -195,6 +165,22 @@ const onClickToast = () => {
         <DropdownItem path="#!" text="item 2"/>
         <DropdownItem path="#!" text="item 3"/>
       </Dropdown>
+      {/* <Confirm isOpen>
+        <ConfirmTitle title="confirm compound"/>
+        <ConfirmButtonList>
+          <ConfirmButton type="truth" getAnswer={value => alert(value)}/>
+          <ConfirmButton type="lies"getAnswer={value => alert(value)}/>
+        </ConfirmButtonList>
+      </Confirm> */}
+      {/* <Progressbar progress={60}>
+        <Progressbar.InfoWrapper>
+          <Progressbar.Percent/>
+          <Progressbar.Title title="test coverage"/>
+        </Progressbar.InfoWrapper>
+        <Progressbar.Line/>
+      </Progressbar> */}
+      {/* <Range min={0} max={200} getCurrentValue={onGetValue}/> */}
+
     </div>
   );
 };
