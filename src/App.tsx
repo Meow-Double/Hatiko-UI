@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 
+import ImageAvatar from "./assets/images/image-1.jpg"
 import { Checkbox, CheckboxLabel, CheckboxText } from "./library/compound/Checkbox/Checkbox";
 import { 
   Drawer, 
@@ -16,7 +17,8 @@ import { Input, InputErrorText, InputLabel, InputText } from "./library/compound
 // import { Range } from "./library/uncompound/Range/Range";
 import { SelectItem,SelectWraper } from "./library/compound/Select/Select";
 import {  Button, Linkify } from "./library/uncompound";
-
+import { Avatar } from "./library/uncompound/Avatar/Avatar";
+import { Radio } from "./library/uncompound/Radio/Radio";
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -165,6 +167,11 @@ const onClickToast = () => {
         <DropdownItem path="#!" text="item 2"/>
         <DropdownItem path="#!" text="item 3"/>
       </Dropdown>
+      <Avatar path={ImageAvatar}/>
+      <div>
+        <Radio name="option"/>
+        <Radio  name="option"/>
+      </div>
       {/* <Confirm isOpen>
         <ConfirmTitle title="confirm compound"/>
         <ConfirmButtonList>

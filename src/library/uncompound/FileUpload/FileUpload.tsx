@@ -9,6 +9,11 @@ export interface FileUploadProps {
   fileAccept?: string;
 }
 
+export const FILEUPLOAD_TEST_IDS = {
+  FILEUPLOAD: 'fileupload',
+  BUTTON: 'fileupload-button'
+};
+
 export const FileUpload = (props: FileUploadProps) => {
   const { getFiles, className, fileAccept } = props;
 
@@ -51,7 +56,7 @@ export const FileUpload = (props: FileUploadProps) => {
   };
 
   return (
-    <div>
+    <div data-testid={FILEUPLOAD_TEST_IDS.FILEUPLOAD}>
       <input
         className={styles.input}
         accept={fileAccept}
@@ -67,6 +72,7 @@ export const FileUpload = (props: FileUploadProps) => {
         onDragLeave={(e) => dragLeaveHandler(e)}
         onDragOver={(e) => dragStartHandler(e)}
         onDrop={(e) => onDropHandler(e)}
+        data-testid={FILEUPLOAD_TEST_IDS.BUTTON}
       >
         {files.length > 0
           ? drag

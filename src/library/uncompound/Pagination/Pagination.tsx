@@ -1,6 +1,6 @@
 
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 import { paginationRange } from '@/library/utils/pagination/paginationRange';
 
@@ -12,6 +12,10 @@ export interface PaginationProps {
   siblings:number
   setPages:(value: number) => void
 }
+
+  export const PAGINATION_TEST_IDS = {
+    PAGINATION:"pagination"
+  }
 
 export const Pagination = (props: PaginationProps) => {
   const { page, siblings, totalPage, setPages} = props;
@@ -33,7 +37,7 @@ export const Pagination = (props: PaginationProps) => {
     }
   }
 
-  return <ul className={styles.pagination}>
+  return <ul className={styles.pagination} data-testid={PAGINATION_TEST_IDS.PAGINATION}>
     <li>
       <button className={styles.item} onClick={() => onChangePage("&laquo;")}>
         &laquo;

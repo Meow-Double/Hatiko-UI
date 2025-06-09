@@ -16,6 +16,11 @@ export interface AccordionProps {
   toggle?: boolean;
 }
 
+export const ACCORDION_TEST_IDS = {
+  ITEM_TITLE: 'accordion-item_title',
+  ITEM_TEXT_WRAPPER: 'accordion-item_text_wrapper'
+};
+
 export const Accordion = (props: AccordionProps) => {
   const { items, classNameTitle, classNameText, toggle } = props;
 
@@ -41,6 +46,7 @@ export const Accordion = (props: AccordionProps) => {
           <button
             onClick={() => onToggleItem(item.id)}
             className={clsx(styles.btn, classNameTitle)}
+            data-testid={ACCORDION_TEST_IDS.ITEM_TITLE}
           >
             {item.title}
           </button>
@@ -48,8 +54,9 @@ export const Accordion = (props: AccordionProps) => {
             className={clsx(styles.text_wrapper, classNameText, {
               [styles.active_text]: activeItemId?.includes(item.id)
             })}
+            data-testid={ACCORDION_TEST_IDS.ITEM_TEXT_WRAPPER}
           >
-            <p className={styles.text}> {item.text}</p>
+            <p className={styles.text}>{item.text}</p>
           </div>
         </li>
       ))}

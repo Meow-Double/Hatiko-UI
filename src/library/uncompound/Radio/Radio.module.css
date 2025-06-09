@@ -1,0 +1,41 @@
+.label{
+    color:var(--white-color);
+    display: flex;
+    align-items: center;
+    gap:8px
+}
+
+.input{
+    display: none;
+}
+
+.radio{ 
+    display: inline-block;
+    color:var(--primary-color);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border:1px solid var(--primary-color);
+
+    position: relative;
+    cursor: pointer;
+}
+
+.radio::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+
+    transition: opacity .2s;
+}
+
+.input:checked ~ .radio::before{
+    opacity: 1;
+}

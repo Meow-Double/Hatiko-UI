@@ -112,24 +112,34 @@ There are also options for compound and uncompound components. And availability 
 | **Input**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
 | **Checkbox**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
+| **Radio**          | ✅    |  `Uncompound` |🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
 | **Select**          | ✅    |  `Uncompound` \| `Compound🗝️` |🧪📕 |
-| **Dropdown**          | ✅    |  `Uncompound`\| `Compound🗝️` |📕|
+| **Dropdown**          | ✅    |  `Uncompound`\| `Compound🗝️` |🧪📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
 | **Confirm**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
-| **Accordion**          | ✅    |  `Uncompound`\| `Compound` |📕 |
+| **Accordion**          | ✅    |  `Uncompound`\| `Compound` |🧪📕 |
 | **Progressbar**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
-| **Range**          | ✅    |  `Uncompound`\| `Compound🗝️` |📕 |
-| **Breadcrumbs**          | ✅    |  `Uncompound`\| `Compound` |📕 |
-| **Pagination**          | ✅    |  `Uncompound`\| `Compound` |📕 |
-| **FileUpload**          | ✅    |  `Uncompound` |📕|
-| **ImagePopup**          | ✅    |  `Uncompound` |📕|
+| **Range**          | ✅    |  `Uncompound`\| `Compound🗝️` |🧪📕 |
+| **Breadcrumbs**          | ✅    |  `Uncompound`\| `Compound` |🧪📕 |
+| **Pagination**          | ✅    |  `Uncompound`\| `Compound` |🧪📕 |
+| **FileUpload**          | ✅    |  `Uncompound` |🧪📕|
+| **ImagePopup**          | ✅    |  `Uncompound` |🧪📕|
 | **Tooltip**          | ✅    |  `Uncompound` |📕|
 | **InputOTP**          | ✅    |  `Uncompound` |📕|
 | **Toast**          | ✅    |  `Uncompound` |📕|
+
+
+
+| **Switch**          | ❌    |  `Uncompound` ||
+| **Navigation Menu**          | ❌   | `Uncompound` ||
+| **Avatar**          | ✅    |  `Uncompound` |📕|
+| **Tabs**          | ❌    |  `Uncompound` ||
+| **Table**          | ❌    |  `Uncompound` ||
+
 
 </div>
 

@@ -43,3 +43,40 @@ describe('Select', () => {
     expect(newActiveText).toHaveTextContent(selectProps.items[2]);
   });
 });
+
+describe('Select classNames', () => {
+  test('should has classNameMenu when provided', () => {
+    const { getByTestId } = render(
+      <Select {...selectProps} classNameMenu='select_className_menu' />
+    );
+    const menu = getByTestId(SELECT_TEST_IDS.MENU);
+
+    expect(menu).toHaveClass('select_className_menu');
+  });
+
+  test("should hasn't classNameMenu when provided", () => {
+    const { queryByTestId } = render(<Select {...selectProps} />);
+
+    const menu = queryByTestId(SELECT_TEST_IDS.MENU);
+
+    expect(menu).not.toHaveClass('select_className_menu');
+  });
+
+  test('should has classNameMenu when provided', () => {
+    const { getByTestId } = render(
+      <Select {...selectProps} classNameShowBar='select_className_bar' />
+    );
+
+    const bar = getByTestId(SELECT_TEST_IDS.ACTIVE_BTN);
+
+    expect(bar).toHaveClass('select_className_bar');
+  });
+
+  test("should hasn't classNameMenu when provided", () => {
+    const { queryByTestId } = render(<Select {...selectProps} />);
+
+    const bar = queryByTestId(SELECT_TEST_IDS.ACTIVE_BTN);
+
+    expect(bar).not.toHaveClass('select_className_bar');
+  });
+});
