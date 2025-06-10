@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import clsx from 'clsx';
 
 import styles from './InputOTP.module.css';
@@ -9,25 +8,21 @@ export interface InputOTPProps {
   className?: string;
 }
 
+export const INPUTOTP_TEST_IDS = {
+  INPUT: 'inputOTP'
+};
+
 export const InputOTP = (props: InputOTPProps) => {
   const { getValue, length = 4, className } = props;
-
-  const [finalResult, setFinalResult] = useState('');
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length === 1) {
       const nextSibling = e.target.nextElementSibling as HTMLInputElement;
       if (nextSibling) {
-        setFinalResult(e.target.value);
         nextSibling.focus();
       }
     }
-
-    setFinalResult((prev) => prev + e.target.value);
-
-    if (finalResult.length >= 3) {
-      getValue(finalResult);
-    }
+    getValue(e.target.value);
   };
 
   const handleKeyUP = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -55,6 +50,7 @@ export const InputOTP = (props: InputOTPProps) => {
           onKeyUp={handleKeyUP}
           inputMode='numeric'
           maxLength={1}
+          data-testid={INPUTOTP_TEST_IDS.INPUT}
         />
       ))}
     </div>

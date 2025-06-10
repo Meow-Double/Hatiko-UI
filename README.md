@@ -112,7 +112,7 @@ There are also options for compound and uncompound components. And availability 
 | **Input**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Textarea**          | ✅    |  `Uncompound` \| `Compound`|🧪📕|
 | **Checkbox**          | ✅    |  `Uncompound` \| `Compound` | 🧪📕|
-| **Radio**          | ✅    |  `Uncompound` |🧪📕|
+| **Radio**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
@@ -128,17 +128,14 @@ There are also options for compound and uncompound components. And availability 
 | **Pagination**          | ✅    |  `Uncompound`\| `Compound` |🧪📕 |
 | **FileUpload**          | ✅    |  `Uncompound` |🧪📕|
 | **ImagePopup**          | ✅    |  `Uncompound` |🧪📕|
-| **Tooltip**          | ✅    |  `Uncompound` |📕|
-| **InputOTP**          | ✅    |  `Uncompound` |📕|
-| **Toast**          | ✅    |  `Uncompound` |📕|
-
-
-
-| **Switch**          | ❌    |  `Uncompound` ||
-| **Navigation Menu**          | ❌   | `Uncompound` ||
-| **Avatar**          | ✅    |  `Uncompound` |📕|
-| **Tabs**          | ❌    |  `Uncompound` ||
-| **Table**          | ❌    |  `Uncompound` ||
+| **Tooltip**          | ✅    |  `Uncompound` |🧪📕|
+| **InputOTP**          | ✅    |  `Uncompound` |🧪📕|
+| **Toast**          | ✅    |  `Uncompound` |🧪📕|
+| **Avatar**          | ✅    |  `Uncompound` |🧪📕|
+| **Switch**          | ✅    |  `Uncompound`\| `Compound🛠️` |🧪📕|
+| **Navigation Menu**          | ✅   | `Uncompound`\| `Compound🛠️` |🧪📕|
+| **Tabs**          | ❌    |  `Uncompound`\| `Compound🛠️` ||
+| **Table**          | ❌    |  `Uncompound`\| `Compound🛠️` ||
 
 
 </div>

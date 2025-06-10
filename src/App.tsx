@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 
-import ImageAvatar from "./assets/images/image-1.jpg"
 import { Checkbox, CheckboxLabel, CheckboxText } from "./library/compound/Checkbox/Checkbox";
 import { 
   Drawer, 
@@ -12,13 +11,12 @@ import {
   DrawerHeader, 
   DrawerTitle } 
   from "./library/compound/Drawer/Drawer";
-import { Dropdown, DropdownItem } from "./library/compound/Dropdown/Dropdown";
 import { Input, InputErrorText, InputLabel, InputText } from "./library/compound/Input/Input";
+import { RadioCompound, RadioItem, RadioTitle } from "./library/compound/Radio/Radio";
 // import { Range } from "./library/uncompound/Range/Range";
-import { SelectItem,SelectWraper } from "./library/compound/Select/Select";
 import {  Button, Linkify } from "./library/uncompound";
-import { Avatar } from "./library/uncompound/Avatar/Avatar";
-import { Radio } from "./library/uncompound/Radio/Radio";
+import { NavigationMenu } from "./library/uncompound/NavigationMenu/NavigationMenu";
+import { Switch } from "./library/uncompound/Switch/Switch";
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -157,21 +155,7 @@ const onClickToast = () => {
       </Tooltip>
       <InputOTP getValue={() => {}} />
       <Toast toastList={list} position="bottom_right" clearToasts={setList}/> */}
-      <SelectWraper>
-        <SelectItem>Item 1</SelectItem>
-        <SelectItem>Item 2</SelectItem>
-        <SelectItem>Item 3</SelectItem>
-      </SelectWraper>
-      <Dropdown title="menu list">
-        <DropdownItem path="#!" text="item 1"/>
-        <DropdownItem path="#!" text="item 2"/>
-        <DropdownItem path="#!" text="item 3"/>
-      </Dropdown>
-      <Avatar path={ImageAvatar}/>
-      <div>
-        <Radio name="option"/>
-        <Radio  name="option"/>
-      </div>
+
       {/* <Confirm isOpen>
         <ConfirmTitle title="confirm compound"/>
         <ConfirmButtonList>
@@ -187,7 +171,20 @@ const onClickToast = () => {
         <Progressbar.Line/>
       </Progressbar> */}
       {/* <Range min={0} max={200} getCurrentValue={onGetValue}/> */}
-
+      <Switch />
+      <RadioCompound name="test1">
+        <RadioItem value="A"/>
+        <RadioTitle title="test"/>
+      </RadioCompound>
+      <RadioCompound name="test1">
+        <RadioItem value="AB"/>
+        <RadioTitle title="test 2"/>
+      </RadioCompound>
+      <NavigationMenu 
+        title="test" 
+        items={[{id:1, text:"test", path:"#!"}, {id:1, text:"test", path:"#!"}]}
+      />
+      <span>test</span>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { CloseIcon } from '@/library/icons';
 
 import styles from './Toast.module.css';
 
-type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
+export type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
 type PositionTypes = 'bottom_right';
 
 export type ToastListTypes = {
@@ -21,6 +21,10 @@ export interface ToastProps {
   clearToasts: (toasts: ToastListTypes[]) => void;
   durationDelete?: number;
 }
+
+export const TOAST_TEST_IDS = {
+  ITEM: 'toast-item'
+};
 
 export const Toast = (props: ToastProps) => {
   const { toastList, position = 'bottom_right', clearToasts, durationDelete = 2000 } = props;
@@ -51,6 +55,7 @@ export const Toast = (props: ToastProps) => {
         <div
           key={`${toast.id}-${index}`}
           className={clsx(styles.notification, styles[toast.variant])}
+          data-testid={TOAST_TEST_IDS.ITEM}
         >
           <div className={styles.header}>
             <p className={styles.title}>{toast.title ? toast.title : toast.variant}</p>

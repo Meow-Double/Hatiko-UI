@@ -1,0 +1,35 @@
+.input{
+    display: none;
+}
+
+.switch{
+    width: 48px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: var(--text-color);
+    border:1px solid var(--text-color);
+    position: relative;
+}
+
+.decor{
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: var(--white-color);
+
+    transition: all .2s ease;
+}
+
+.input:checked ~ .switch .decor{
+    left: 58%;
+    top: 3px;
+}
+
+.input:checked + .switch{
+    background-color: var(--primary-color);
+    border:1px solid var(--primary-color);
+}

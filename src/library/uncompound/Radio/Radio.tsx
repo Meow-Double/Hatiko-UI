@@ -16,7 +16,7 @@ export const RADIO_TEST_IDS = {
 }
 
 export const Radio = (props:RadioProps) => {
-    const {title,value,onChange, type="radio", className, id, ...otherProps} = props;
+    const {title, type="radio", className, id, ...otherProps} = props;
     
   return (
     <label 
@@ -29,8 +29,6 @@ export const Radio = (props:RadioProps) => {
             className={styles.input} 
             type={type} 
             id={id} 
-            value={value} 
-            onChange={onChange}
             data-testid={RADIO_TEST_IDS.INPUT}
             {...otherProps}
         />
