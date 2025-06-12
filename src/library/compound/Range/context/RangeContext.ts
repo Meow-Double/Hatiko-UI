@@ -1,12 +1,6 @@
 import { createAccurateContext } from '@/library/utils/context/createAccurateContext';
 
 
-
-
-
-
-
-
 export interface RangeContextParams {
     min:number;
     max:number;

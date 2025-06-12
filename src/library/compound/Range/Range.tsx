@@ -21,12 +21,10 @@ export const Range = ({children,min=1, max=100, step=1 }: RangeProps) => {
 };
 
 
-
 export const RangeMinText = () => {
   const {min} = useRangeContext()
   return  <span className={styles.min_count}>{min}</span>
 }
-
 
 
 export const RangeMaxText = () => {
@@ -40,27 +38,27 @@ interface RangeLineProps {
 }
 
 export const RangeLine = ({defaultValue, getCurrentValue}:RangeLineProps ) => {
-  const [value, setValue] = useState<number>(defaultValue ?? 1);
   const {max, min, step} = useRangeContext();
+  const [value, setValue] = useState<number>(defaultValue ?? 1);
 
-   const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {
-      const currentValue = Number(e.target.value)
-      setValue(Number(currentValue));
-      if(getCurrentValue){
-        getCurrentValue(currentValue)
-      }
-    };
+
+
+  const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {
+    const currentValue = Number(e.target.value);
+    setValue(Number(currentValue));
+    if (getCurrentValue) {
+      getCurrentValue(currentValue);
+    }
+  };
   
+const newValue = Math.ceil(value / step) * step; 
+const percent = Math.max(2, Math.round(((newValue - min) / (max - min)) * 100));
 
-    const newValue = Math.round(value / step) * step;
-    const percent = ((Number(newValue) - Number(min)) / ((Number(max) - Number(min))) * 100);
 
     const rangeStyles: CSSProperties = {
-      background: 
-      `linear-gradient(to right, var(--primary-color) 
-      ${percent}%, var(--white-color) ${percent}%)`
+      background: `linear-gradient(to right, var(--primary-color) 
+    ${percent}%, var(--white-color) ${percent}%)`
     };
-  
 
   return    <input
         className={styles.input}
@@ -70,7 +68,6 @@ export const RangeLine = ({defaultValue, getCurrentValue}:RangeLineProps ) => {
         onChange={onChangeValue}
       />
 }
-
 
 Range.displayName = "Range"
 RangeMinText.displayName = "RangeMinText"

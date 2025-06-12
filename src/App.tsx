@@ -11,12 +11,17 @@ import {
   DrawerHeader, 
   DrawerTitle } 
   from "./library/compound/Drawer/Drawer";
+import { Dropdown, DropdownItem } from "./library/compound/Dropdown/Dropdown";
 import { Input, InputErrorText, InputLabel, InputText } from "./library/compound/Input/Input";
-import { RadioCompound, RadioItem, RadioTitle } from "./library/compound/Radio/Radio";
+import { 
+  Range, 
+  RangeLine, 
+  RangeMaxText, 
+  RangeMinText 
+} from "./library/compound/Range/Range";
+import { SelectItem, SelectWraper } from "./library/compound/Select/Select";
 // import { Range } from "./library/uncompound/Range/Range";
 import {  Button, Linkify } from "./library/uncompound";
-import { NavigationMenu } from "./library/uncompound/NavigationMenu/NavigationMenu";
-import { Switch } from "./library/uncompound/Switch/Switch";
 // import { Button } from './library/compound/Button/Button';
 // import { SearchIcon } from './library/icons';
 // import { Accordion } from './library/uncompound/Accordion/Accordion';
@@ -60,16 +65,13 @@ const [value] = useState(0)
 //   }
 // setList([toastProperties, toastProperties])
 // }
-
-const onClickToast = () => {
   
-}
+
 
 
   return (
     <div className='flex_block'>
       <Button variant="primary" onClick={() => setIsOpen(true)}>onClick</Button>
-      <Button variant="primary" onClick={onClickToast}>onClick</Button>
       <Drawer isOpen={isOpen} closeDrawer={() => setIsOpen(false)}>
         <DrawerHeader>
           <DrawerTitle title="Drawer Compund"/>
@@ -171,7 +173,7 @@ const onClickToast = () => {
         <Progressbar.Line/>
       </Progressbar> */}
       {/* <Range min={0} max={200} getCurrentValue={onGetValue}/> */}
-      <Switch />
+      {/* <Switch />
       <RadioCompound name="test1">
         <RadioItem value="A"/>
         <RadioTitle title="test"/>
@@ -179,12 +181,46 @@ const onClickToast = () => {
       <RadioCompound name="test1">
         <RadioItem value="AB"/>
         <RadioTitle title="test 2"/>
-      </RadioCompound>
-      <NavigationMenu 
+      </RadioCompound> */}
+      {/* <NavigationMenu 
         title="test" 
         items={[{id:1, text:"test", path:"#!"}, {id:1, text:"test", path:"#!"}]}
-      />
-      <span>test</span>
+      /> */}
+      {/* <NavigationMenu title="items">
+        <NavigationMenuItem path="#!">item 1</NavigationMenuItem>
+        <NavigationMenuItem path="#!">item 2</NavigationMenuItem>
+        <NavigationMenuItem path="#!">item 3</NavigationMenuItem>
+        <NavigationMenuItem path="#!">item 4</NavigationMenuItem>
+      </NavigationMenu>
+      <Table>
+        <TableBody>
+          <TableRow>
+            <TableData>hello</TableData>
+            <TableData>hello2</TableData>
+            <TableData>hello3</TableData>
+          </TableRow>
+             <TableRow>
+            <TableData>hello</TableData>
+            <TableData>hello2</TableData>
+            <TableData>hello3</TableData>
+          </TableRow>
+        </TableBody>
+      </Table> */}
+      <Range >
+        <RangeLine />
+        <RangeMinText />
+        <RangeMaxText />
+      </Range>
+      <Dropdown title="items">
+        <DropdownItem path="s" text="s"/>
+        <DropdownItem path="s" text="SD"/>
+        <DropdownItem path="d" text="dff"/>
+      </Dropdown>
+      <SelectWraper>
+        <SelectItem>item1</SelectItem>
+        <SelectItem>item2</SelectItem>
+      </SelectWraper>
+      <span>s</span>
     </div>
   );
 };

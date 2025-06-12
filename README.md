@@ -116,8 +116,8 @@ There are also options for compound and uncompound components. And availability 
 | **Modal**          | ✅    |  `Uncompound` \| `Compound`| 🧪📕|
 | **Drawer**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
 | **Badge**          | ✅    |  `Uncompound` | 🧪📕|
-| **Select**          | ✅    |  `Uncompound` \| `Compound🗝️` |🧪📕 |
-| **Dropdown**          | ✅    |  `Uncompound`\| `Compound🗝️` |🧪📕|
+| **Select**          | ✅    |  `Uncompound` \| `Compound` |🧪📕 |
+| **Dropdown**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
 | **Typography**          | ✅    |  `Uncompound` |🧪📕 |
 | **Linkify**          | ✅    |  `Uncompound` |🧪📕 |
 | **Confirm**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
@@ -132,10 +132,10 @@ There are also options for compound and uncompound components. And availability 
 | **InputOTP**          | ✅    |  `Uncompound` |🧪📕|
 | **Toast**          | ✅    |  `Uncompound` |🧪📕|
 | **Avatar**          | ✅    |  `Uncompound` |🧪📕|
-| **Switch**          | ✅    |  `Uncompound`\| `Compound🛠️` |🧪📕|
-| **Navigation Menu**          | ✅   | `Uncompound`\| `Compound🛠️` |🧪📕|
-| **Tabs**          | ❌    |  `Uncompound`\| `Compound🛠️` ||
-| **Table**          | ❌    |  `Uncompound`\| `Compound🛠️` ||
+| **Switch**          | ✅    |  `Uncompound` |🧪📕|
+| **Navigation Menu**          | ✅   | `Uncompound`\| `Compound` |🧪📕|
+| **Tabs**          | ✅    |  `Uncompound` |🧪📕|
+| **Table**          | ✅    |  `Uncompound`\| `Compound` |🧪📕|
 
 
 </div>
@@ -408,7 +408,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Dropdown</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 |  Props |    Types | Compulsory |
@@ -541,7 +541,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Accordion</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -613,7 +613,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Range</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -649,7 +649,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Breadcrumbs</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -690,7 +690,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Pagination</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -729,7 +729,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>FileUpload</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -761,7 +761,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>ImagePopup</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -793,7 +793,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Tooltip</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -823,7 +823,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>InputOTP</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -853,7 +853,7 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Toast</summary>
 
-![Test](https://img.shields.io/badge/-Testing❌-C71D23?style=social-square&link=#!/)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
 ![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
@@ -903,12 +903,194 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 
+<details>
+</br>
+<summary>Avatar</summary>
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| path | `string`   | true|
+
+</br>
+
+```javascript
+      <Avatar path="./hatiko-ui/avatar.png" />
+```
+
+</br>
+- <b>path</b> - Path to the image file
+</details>
+
+
+<details>
+</br>
+<summary>Switch</summary>
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| getState | `(value: boolean) => void`   | false|
+| className | `string`   | false|
+| checked | `boolean`   | false|
+
+</br>
+
+
+
+```javascript
+      <Switch getState={value => setState(value)} checked />
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>Navigation Menu</summary>
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| items | `NavigationMenuItem[]`   | true|
+| title | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      type NavigationMenuItem = {
+            id: number | string;
+            text: string;
+            path: string;
+      };
+```
+
+</br>
+
+<b>NavigationMenu</b>
+
+
+```javascript
+      <NavigationMenu
+            items={[
+                  {
+                        id:1,
+                        text:"item1",
+                        path:"/item1"
+                  },
+                     {
+                        id:2,
+                        text:"item2",
+                        path:"/item2"
+                  },
+                     {
+                        id:2,
+                        text:"item2",
+                        path:"/item2"
+                  }
+            ]} 
+       />
+```
+
+</details>
+
+<details>
+</br>
+<summary>Tabs</summary>
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
 
 
 
 
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| schema | `T`   | true|
+| className | `string`   | false|
+| classNameContent | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      export interface TabsProps<T> {
+            schema: T;
+            className?: string;
+            classNameContent?: string;
+      }
+
+      //T extends Record<String, ReactNode>
+```
+
+</br>
+
+<b>Tabs</b>
 
 
+```javascript
+      <Tabs
+            items={{
+                  hatikoUi:"This library is hatikoUI",
+                  Author:"This is text about author",
+            }} 
+       />
+```
+
+</details>
+
+
+
+<details>
+</br>
+<summary>Table</summary>
+
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+
+
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| schema | `T`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      export interface TableProps<T> {
+            schema: T;
+            className?: string;
+      }
+
+      //T extends Record<String, ReactNode[]>
+```
+
+</br>
+
+<b>Tabs</b>
+
+
+```javascript
+      <Table
+            items={{
+                  row1:["column1", 2, 3],
+                  row2:["column1", null, "column3"]
+                  row3:["column1", "column2", 2]
+            }} 
+       />
+```
+
+</details>
 
 
 

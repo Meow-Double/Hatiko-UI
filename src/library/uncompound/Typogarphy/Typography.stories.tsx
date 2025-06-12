@@ -35,15 +35,13 @@ const TypographyWrapper = ({ variant }: { variant: TypographyVariants }) => {
 
   return (
     <div
+    className='typography_block'
       style={{
-        display: 'flex',
-        gap: '20px',
-        color: '#fff',
         fontSize: `${match[2]}px`,
         fontWeight: `${match[1]}`
       }}
     >
-      <div style={{ display: 'flex', gap: '6px', color: '#73828C' }}>
+      <div className='typography_info'>
         <p>{match[2]}px</p>
         <span>({match[1]})</span>
       </div>
@@ -56,9 +54,9 @@ const TypographyWrapper = ({ variant }: { variant: TypographyVariants }) => {
 
 export const TypographyShowcase = {
   render: () => (
-    <div style={{ fontFamily: 'Helvetica' }}>
-      <h1 style={{ color: '#fff' }}>Typography variants</h1>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div className='typography_inner'>
+      <h1 className='typography_title'>Typography variants</h1>
+      <div className='typography_content'>
         {typographyVariants.map((typographyVariant) => (
           <TypographyWrapper key={typographyVariant} variant={typographyVariant} />
         ))}
