@@ -1,0 +1,55 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.item{
+
+    /* border-block: 1px solid white; */
+}
+
+.btn{
+    width: 100%;
+    padding: 8px 12px;
+    border:1px solid transparent;
+    border-radius: 4px;
+
+    margin-bottom: 4px;
+
+    background-color: var(--primary-color);
+    color:var(--white-color);
+
+    cursor: pointer;
+}
+
+.text_wrapper{
+
+height: 0;
+ border-radius: 4px;
+ color:var(--text-color);
+
+ opacity: 0;
+ pointer-events: none;
+
+ transition: all .2s ease;
+ visibility: hidden;
+
+}
+
+.active_text{
+height: 100%;
+ opacity: 1;
+ pointer-events: visible;
+ visibility: visible;
+
+ /* transform: translateY(0px); */
+}
+
+.text{ 
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 4px;
+}

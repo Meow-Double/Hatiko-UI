@@ -1,0 +1,35 @@
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+}
+
+.group{
+    color:var(--white-color);
+}
+
+.btn{
+   width: 100%;
+    padding: 8px 12px;
+    border:1px solid transparent;
+    border-radius: 4px;
+
+    margin-bottom: 4px;
+
+    background-color: var(--primary-color);
+    color:var(--white-color);
+
+    cursor: pointer;
+}
+
+.text{
+      display: inline-block;
+    width: 100%;
+    padding-block: 6px;
+    padding-inline: 12px;
+}
+
+.text:last-child{
+    margin-bottom: 20px;
+}

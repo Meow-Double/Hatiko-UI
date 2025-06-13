@@ -1,0 +1,22 @@
+
+.input{
+    display: none;
+}
+
+.btn_upload{
+    padding: 12px 8px;
+    border:1px solid var(--white-color);
+    border-radius: 4px;
+    background-color: var(--primary-light-color);
+    color:var(--white-color);
+    transition: background-color .1s ease;
+
+    &:hover{
+       background-color:var(--primary-hover-color) ; 
+    }
+}
+
+.active{
+      border-style: dashed;
+      background-color:var(--primary-hover-color) ;
+}

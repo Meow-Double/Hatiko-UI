@@ -147,6 +147,10 @@ There are also options for compound and uncompound components. And availability 
 ### 📚 Examples
 Here are examples of using components with descriptions of their props. Each component has several use cases, depending on which props it contains.
 
+
+<details>
+</br>
+<summary>Uncompound components</summary>
 <details>
 </br>
 <summary>Button</summary>
@@ -1054,8 +1058,8 @@ Here are examples of using components with descriptions of their props. Each com
 </br>
 <summary>Table</summary>
 
-![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/)
-![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!)
+![Test](https://img.shields.io/badge/-Testing✅-719C17?style=social-square&link=#!/);
+![Stories✅](https://img.shields.io/badge/-Stories✅-DD0B78?style=social-square&link=#!);
 
 
 
@@ -1084,14 +1088,243 @@ Here are examples of using components with descriptions of their props. Each com
       <Table
             items={{
                   row1:["column1", 2, 3],
-                  row2:["column1", null, "column3"]
+                  row2:["column1", null, "column3"],
                   row3:["column1", "column2", 2]
             }} 
        />
 ```
 
 </details>
+</details>
 
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+<details>
+</br>
+<summary>Compound components</summary>
+
+<details>
+</br>
+<summary>Button</summary>
+
+<details>
+</br>
+<summary>ButtonCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| variant | `ButtonPropsVariants`   | true|
+| ...props   |  `button props` | false|
+
+<b>Types</b>
+
+```typescript
+      type ButtonPropsVariants = 'primary' | 'outline';
+
+      interface ButtonProps extends ComponentProps<'button'> {
+            children: ReactNode;
+            variant: ButtonPropsVariants;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>ButtonIcon</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| icon | `ReactNode`   | true|
+
+<b>Types</b>
+
+```typescript
+      interface ButtonIconProps {
+            icon: ReactNode;
+      }
+```
+
+</details>
+
+
+</br>
+
+<b>Button Example 1</b>
+
+
+```javascript
+      <ButtonCompound>
+            <span>Search</span>
+            <ButtonIcon icon={<SearchIcon />}>
+      </ButtomCompound>
+```
+<b>Button Example 2</b>
+
+```javascript
+      <ButtonCompound>
+            <ButtonIcon icon={<FindIcon />}>
+            <span>Find</span>
+      </ButtomCompound>
+```
+<b>Button Example 3</b>
+
+```javascript
+      <ButtonCompound>
+           loading...
+      </ButtomCompound>
+```
+
+</details>
+
+
+<!-- --------------Input Compound------ -->
+
+<details>
+</br>
+<summary>Input</summary>
+
+<details>
+</br>
+<summary>InputCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| ...props   |  `label props` | false|
+
+<b>Types</b>
+
+```typescript
+      interface InputCompoundProps extends ComponentProps<'label'> {
+            children: ReactNode;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>InputItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| variant | `InputVariants`   | true|
+| error | `boolean`   | false|
+| ...props   |  `input props` | false|
+
+<b>Types</b>
+
+```typescript
+      type InputItemVariants = 'primary' | 'outline';
+
+      interface InputItemProps extends ComponentProps<'input'> {
+            variant: InputItemVariants;
+            error?: boolean;
+      }
+
+```
+
+</details>
+
+<details>
+</br>
+<summary>InputGroup</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| variant | `InputVariants`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface InputGroupProps {
+            children: ReactNode;
+            className?: string;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>InputText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| text | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface InputTextProps {
+            text: string;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>InputErrorTex</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| text | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface InputErrorTextProps {
+            text: string;
+            className?: string;
+      }
+```
+
+</details>
+
+
+
+</br>
+
+<b>Input Example 1</b>
+
+```javascript
+      <InputCompound>
+            <InputText text="username"/>
+            <InputItem error={!!error.message.text} variant="primary"/>
+            <InputErrorText text={error.message.text}>
+      </InputCompound>
+```
+
+<b>Input Example 2</b>
+
+```javascript
+      <InputCompound>
+            <InputGroup>
+                  <InputItem variant="outline"/>
+                  <SearchIcon />
+            </InputGroup>
+      </InputCompound>
+```
+
+</details>
+
+
+
+
+
+
+</details>
 
 
 </div>

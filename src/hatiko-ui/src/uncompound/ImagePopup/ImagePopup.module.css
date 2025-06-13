@@ -1,0 +1,71 @@
+.overlay{
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--overlay-color);
+    gap:20px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all .1s ease;
+    visibility: hidden;
+}
+
+.images{
+    position: relative;
+    width: 600px;
+    height: 380px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: all .4s ease;
+}
+
+.active_overlay > .images  {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.active{
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.active_overlay{
+    opacity: 1;
+    pointer-events: visible;
+    visibility: visible;
+}
+
+.btn{
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--primary-light-color);
+
+    transition: background-color .2s ease;
+
+    &:hover{
+        background-color: var(--primary-hover-color);
+    }
+}

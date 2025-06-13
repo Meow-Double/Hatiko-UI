@@ -1,0 +1,46 @@
+
+
+
+
+.tooltip{
+    margin-top: 60px;
+}
+
+.tabs{
+    width: 100%;
+    max-width: 300px;
+}
+
+.tabs_link{
+    text-decoration: underline;
+}
+
+.typography_inner{
+  color:#ffffff;
+font-family: Helvetica, sans-serif;
+}
+
+.typography_title{
+margin-bottom: 20px;
+color: #ffffff;
+font-size: 24px;
+font-weight: 700;
+}
+
+.typography_content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.typography_block{
+      display: flex;
+        color: #ffffff;
+        gap: 20px;
+}
+
+.typography_info{
+     display: flex; 
+     color: #73828C; 
+     gap: 6px 
+}

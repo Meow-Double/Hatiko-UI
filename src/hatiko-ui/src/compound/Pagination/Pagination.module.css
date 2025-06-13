@@ -1,0 +1,34 @@
+
+
+.pagination{
+    display: flex;
+    align-items: center;
+    color:var(--white-color)
+}
+
+.item{
+    display: flex;
+    width: 32px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border:1px solid var(--white-color);
+    background-color: var(--primary-light-color);
+
+    &:hover{
+        background-color: var(--primary-hover-color);
+    }
+}
+
+.item:disabled{
+    cursor: default;
+}
+
+.active{
+    background-color: var(--white-color);
+    color:var(--primary-color);
+
+      &:hover{
+          background-color: var(--white-color);
+    }
+}
