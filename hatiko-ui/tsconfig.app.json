@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
- "include": ["src", "**/*.ts", "**/*.tsx", "@types/vite-env.d.ts", "hatiko-ui"]
+ "include": ["src", "**/*.ts", "**/*.tsx", "@types/vite-env.d.ts", "cli/index.js"]
 }
