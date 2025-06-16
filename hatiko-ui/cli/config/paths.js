@@ -13,6 +13,8 @@ const pathCompoundMain = path.join(srcMainLibrary, 'comnpound');
 const pathAuxiliaryMain = path.join(srcMainLibrary, 'auxiliary');
 const pathUtilsMain = path.join(srcMainLibrary, 'utils');
 const pathConfigMain = path.join(srcMainLibrary, 'config');
+const pathConfigTestsMain = path.join(pathConfigMain, 'test');
+const pathConfigStorybookMain = path.join(pathConfigMain, 'storybook');
 const pathAssetsMain = path.join(srcMainLibrary, 'assets');
 
 // -------------------------------------------------
@@ -25,6 +27,8 @@ const pathCompoundDest = path.join(srcDestLibary, 'comnpound');
 const pathAuxiliaryDest = path.join(srcDestLibary, 'auxiliary');
 const pathUtilsDest = path.join(srcDestLibary, 'utils');
 const pathConfigDest = path.join(srcDestLibary, 'config');
+const pathConfigTestsDest = path.join(pathConfigDest, 'test');
+const pathConfigStorybookDest = path.join(pathConfigDest, 'storybook');
 const pathAssetsDest = path.join(srcDestLibary, 'assets');
 
 module.exports = {
@@ -45,4 +49,8 @@ pathAuxiliaryDest,
 pathUtilsDest,
 pathConfigDest,
 pathAssetsDest,
+pathConfigStorybookDest,
+pathConfigStorybookMain,
+pathConfigTestsDest,
+pathConfigTestsMain
 }

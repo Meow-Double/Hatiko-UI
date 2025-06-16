@@ -2,8 +2,9 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
+import * as Icons from '../../icons/index';
+
 import { Input, InputProps } from './Input';
-import { SearchIcon } from '@/hatiko-ui/icons';
 
 const meta: Meta<typeof Input> = {
   title: 'UI/Input',
@@ -15,7 +16,7 @@ const inputProps: InputProps = {
   placeholder:"username..."
 };
 
-const inputIcon = <SearchIcon />;
+const inputIcon = <Icons.SearchIcon />;
 
 type Story = StoryObj<typeof Input>;
 const InputTemplate: Story = { render: (args) => <Input {...args} /> };
