@@ -23,6 +23,7 @@
 - [Installation](#installation)  
 - [Components List](#components)  
 - [Examples](#examples)  
+- [Themes](#themes)  
 - [CLI](#cli)  
 
 
@@ -1319,18 +1320,520 @@ Here are examples of using components with descriptions of their props. Each com
 
 </details>
 
+<!-- ---------------TextareaCompound------------------- -->
 
+<details>
+</br>
+<summary>Textarea</summary>
 
+<details>
+</br>
+<summary>InputCompound</summary>
 
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| ...props   |  `label props` | false|
 
+<b>Types</b>
+
+```typescript
+      interface InputCompoundProps extends ComponentProps<'label'> {
+            children: ReactNode;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>TextareaItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| variant | `TextareaItemVariants`   | true|
+| ...props   |  `input props` | false|
+
+<b>Types</b>
+
+```typescript
+      type TextareaItemVariants = 'primary' | 'outline';
+
+      interface TextareaItemProps extends ComponentProps<'textarea'> {
+            variant: TextareaItemVariants;
+      }
+```
 
 </details>
 
 
-</div>
+<details>
+</br>
+<summary>TextareaText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| text | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface TextareaTextProps {
+            text: string;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>TextareaErrorText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| text | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface TextareaErrorTextProps {
+            error: string;
+            className?: string;
+      }
+```
+
+</details>
+
 
 
 </br>
+
+<b>Textarea Example 1</b>
+
+```javascript
+      <TextareaCompound>
+            <TextareaText text="about us"/>
+            <TextareaItem error={!!error.message.text} variant="primary"/>
+      </TextareaCompound>
+```
+
+<b>Textarea Example 2</b>
+
+```javascript
+      <TextareaCompound>
+            <TextareaText text="about us"/>
+            <TextareaItem error={!!error.message.text} variant="outline"/>
+            <TextareaErrorText text={error.message.text}>
+      </TextareaCompound>
+```
+
+</details>
+
+<!-- ----------------Checkbox-------------------- -->
+
+<details>
+</br>
+<summary>Checkbox</summary>
+
+<details>
+</br>
+<summary>CheckboxCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| ...props   |  `label props` | false|
+
+<b>Types</b>
+
+```typescript
+      interface CheckboxCompoundProps extends ComponentProps<'label'> {
+            children:ReactNode;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>CheckboxItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| getCheckboxState | `(state: boolean) => void`   | true|
+
+<b>Types</b>
+
+```typescript
+      interface CheckboxItemProps extends ComponentProps<'input'> {
+            getCheckboxState: (state: boolean) => void;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>CheckboxText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| text | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface CheckboxTextProps {
+            text: string;
+            className?: string;
+      }
+```
+
+</details>
+
+</br>
+
+<b>Checkbox Example 1</b>
+
+```javascript
+      <CheckboxCompound>
+            <CheckboxItem getCheckboxState={getValue}/>
+      </CheckboxCompound>
+```
+
+<b>Checkbox Example 2</b>
+
+```javascript
+       <CheckboxCompound>
+            <CheckboxItem getCheckboxState={getValue}/>
+            <CheckboxText text="checkbox label"/>
+      </CheckboxCompound>
+```
+
+</details>
+
+
+<!-- --------------Radio----------------------- -->
+
+
+<details>
+</br>
+<summary>Radio</summary>
+
+<details>
+</br>
+<summary>RadioCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| name   |  `string` | false|
+
+<b>Types</b>
+
+```typescript
+      interface RadioCompoundProps {
+            children: ReactNode;
+            className?: string;
+            name?: string;
+      }     
+```
+
+</details>
+
+<details>
+</br>
+<summary>RadioTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `string`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface RadioTitleProps {
+            title: string;
+            className?: string;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>RadioItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| type | `radio`   | false|
+| ...props | `input props`   | false|
+
+<b>Types</b>
+
+```typescript
+      type RadioItemProps = ComponentProps<'input'>;
+```
+</details>
+
+</br>
+
+<b>Radio Example 1</b>
+
+```javascript
+      <RadioCompound>
+            <RadioItem />
+      </RadioCompound>
+```
+
+<b>Radio Example 2</b>
+
+```javascript
+        <RadioCompound>
+            <RadioItem />
+            <RadioTitle title="Radio element" />
+      </RadioCompound>
+```
+
+</details>
+
+<!-- -----------------Modal------------- -->
+<details>
+</br>
+<summary>Modal</summary>
+
+<details>
+</br>
+<summary>ModalCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| classNameOverlay | `string`   | false|
+| classNameBody | `string`   | false|
+| isOpen   |  `boolean` | true|
+| closeModal   |  `() => void` | true|
+| lazy   |  `boolean` | false|
+
+<b>Types</b>
+
+```typescript
+      interface ModalCompoundProps {
+            children: ReactNode;
+            classNameOverlay?: string;
+            classNameBody?: string;
+            isOpen: boolean;
+            closeModal: () => void;
+            lazy?: boolean;
+      }   
+```
+
+</details>
+
+<details>
+</br>
+<summary>ModalHeader</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface ModalHeaderProps {
+            children: ReactNode,
+            className?:string
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>ModalTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `ReactNode`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface ModalTitleProps {
+            title: ReactNode,
+            className?:string;
+      }
+```
+</details>
+
+<details>
+</br>
+<summary>ModalContent</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface ModalContentProps {
+            children: ReactNode;
+            className?:string;
+      }
+```
+</details>
+
+<details>
+</br>
+<summary>ModalCloseBtn</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+<b>Types</b>
+
+```typescript
+      interface ModalCloseBtnProps {
+            className?:string;
+      }
+```
+</details>
+</br>
+
+<b>Moda Example 1</b>
+
+```javascript
+      <ModalCompound 
+            isOpen={isOpen} 
+            closeModal={onCloseModal}
+            classNameBody="modal_body"
+            lazy
+      >
+            <ModalContent>
+                  ...content
+            </ModalContent>
+      </ModalCompound>
+```
+
+<b>Moda Example 2</b>
+
+```javascript
+      <ModalCompound 
+            isOpen={isOpen} 
+            closeModal={onCloseModal}
+      >
+            <ModalHeader>
+                  <ModalTitle title="modal_title" />
+                   <ModalCloseBtn />
+            </ModalHeader>
+            <ModalContent>
+                  ...content
+            </ModalContent>
+      </ModalCompound>
+```
+
+</details>
+
+
+<!-- -----------------Drawer------------- -->
+<!-- -----------------Select------------- -->
+<!-- -----------------Dropdown------------- -->
+<!-- -----------------Confirm------------- -->
+<!-- -----------------Accordion------------- -->
+<!-- -----------------Progressbar------------- -->
+<!-- -----------------Range------------- -->
+<!-- -----------------Breadcrumbs------------- -->
+<!-- -----------------Pagination------------- -->
+<!-- -----------------Navigation Menu------------- -->
+<!-- -----------------Table------------- -->
+
+
+</details>
+
+</br>
+</div>
+
+
+<div id="themes">
+
+### 🦎 Themes
+
+<details>
+
+<summary>Default</summary>
+
+|  Hex color |    Visual |  Naming | 
+|----------------|-----|-------|
+| `#69974e` |  ![primary](https://img.shields.io/badge/-69974e?style=social-square&link=#!/)  | primary |
+| `#617D52` |  ![primary](https://img.shields.io/badge/-617D52?style=social-square&link=#!/)  | primary (70% opacity) |
+| `#75a857` |  ![primary](https://img.shields.io/badge/-75a857?style=social-square&link=#!/)  |  primary-light |
+| `#90b978` |  ![primary](https://img.shields.io/badge/-90b978?style=social-square&link=#!/)  |  primary-hover | 
+| `#90b978` |  ![primary](https://img.shields.io/badge/-90b978?style=social-square&link=#!/)  |  primary-disabled |
+
+</details>
+
+<details>
+<summary>Ocean</summary>
+
+|  Hex color |    Visual |  Naming | 
+|----------------|-----|-------|
+| `#64959E` |  ![primary](https://img.shields.io/badge/-64959E?style=social-square&link=#!/)  | primary |
+| `#577680` |  ![primary](https://img.shields.io/badge/-577680?style=social-square&link=#!/)  | primary (70% opacity) |
+| `#72a6af` |  ![primary](https://img.shields.io/badge/-72a6af?style=social-square&link=#!/)  |  primary-light |
+| `#84c0cb` |  ![primary](https://img.shields.io/badge/-84c0cb?style=social-square&link=#!/)  |  primary-hover | 
+| `#8fcad4` |  ![primary](https://img.shields.io/badge/-8fcad4?style=social-square&link=#!/)  |  primary-disabled |
+
+</details>
+
+<details>
+<summary>New-York</summary>
+
+|  Hex color |    Visual |  Naming | 
+|----------------|-----|-------|
+| `#1f1f38` |  ![primary](https://img.shields.io/badge/-1f1f38?style=social-square&link=#!/)  | primary |
+| `#2D2C3F` |  ![primary](https://img.shields.io/badge/-2D2C3F?style=social-square&link=#!/)  | primary (70% opacity) |
+| `#35355e` |  ![primary](https://img.shields.io/badge/-35355e?style=social-square&link=#!/)  |  primary-light |
+| `#434376` |  ![primary](https://img.shields.io/badge/-434376?style=social-square&link=#!/)  |  primary-hover | 
+| `#626288` |  ![primary](https://img.shields.io/badge/-626288?style=social-square&link=#!/)  |  primary-disabled |
+
+</details>
+
+<details>
+<summary>Classic</summary>
+
+
+|  Hex color |    Visual |  Naming | 
+|----------------|-----|-------|
+| `#3b3b3b` |  ![primary](https://img.shields.io/badge/-3b3b3b?style=social-square&link=#!/)  | primary |
+| `#3E3D41` |  ![primary](https://img.shields.io/badge/-3E3D41?style=social-square&link=#!/)  | primary (70% opacity) |
+| `#4d4c4c` |  ![primary](https://img.shields.io/badge/-4d4c4c?style=social-square&link=#!/)  | primary-light |
+| `#636363` |  ![primary](https://img.shields.io/badge/-636363?style=social-square&link=#!/)  | primary-hover | 
+| `#878686` |  ![primary](https://img.shields.io/badge/-878686?style=social-square&link=#!/)  | primary-disabled |
+
+</details>
+
+</div>
+
+<br/>
+
 
 <div id="cli">
 
@@ -1338,30 +1841,59 @@ Here are examples of using components with descriptions of their props. Each com
 
 `hatiko-ui` - includes a command to automatically create components with the required directories and files
 
-- `add <...arguments>` - Adds the components specified as arguments to the catalog
+- `add <...arguments>` - Adds the uncompound components specified as arguments to the catalog.
 
-<b>Examples</b>
+<b>Example</b>
 
 ```javascript
 hatiko-ui add Button Input Select
 ```
+<br/>
 
-- Always with the components will come the styles folder, which contains the main styles for the components
 
->ℹ️ INFO
->Depending on the specified components, an icons folder may be created that contains the desired icons
+- `add <...arguments> --compound` - Adds the compound components specified as arguments to the catalog.
+(The flag compound indicates that the components will be of the compound type).
+
+<b>Example</b>
+
+```javascript
+hatiko-ui add Button Input Modal --compound
+```
+<br/>
+
+> ℹ️ INFO  
+> When installing the components, all the necessary folders will be pulled in automatically, except for utils and auxiliary. If you wish, you can delete them, but please note that some components may use this data.
+
+<br/>
+
+
+- `theme <theme name>` - adds a folder containing the colors of a particular theme.
+
+<b>Examples</b>
+
+```javascript
+hatiko-ui theme ocean
+```
+
+> ℹ️ INFO  
+> A list of all topics and colors is provided above in the table.
+
 
 </br>
 
 ### 📁 Main catalog: `hatiko-ui`
 Contains three main folders:
-- `components` – contains the catalogs of the individual components and the file `index.ts`.
+- `uncompound` – contains the catalogs of the individual components and the file `index.ts`.
+- `compound` – contains directories of individual components and a `compound` file of type `index.ts`.
+- `auxiliary` – contains all auxiliary components
 - `styles` – includes three files: `index.css`, `reset.css`, `variables.css`.
 - `icons` – contains files with icons and `index.ts` to export them.
+- `utils` – contains auxiliary functions and utilities
+- `config` – contains everything necessary for `storybook` and `tests`.
 
 ```plaintext
 
-components/
+uncompound/
 │── Button/
 │   ├── Button.tsx
 │   ├── Button.module.css
@@ -1371,17 +1903,70 @@ components/
 │── Modal/
 │   ├── Modal.tsx
 │   ├── Modal.module.css
+│── Linkify/
+│   ├── Linkify.tsx
+│   ├── Linkify.module.css
+...
 │── index.ts
 
+compound/
+│── Button/
+│   ├── Button.tsx
+│   ├── Button.module.css
+│── Modal/
+│   ├── Modal.tsx
+│   ├── Modal.module.css
+...
+│── index.ts
+
+auxiliary/
+│── Container/
+│   ├── Container.tsx
+│   ├── Container.module.css
+│── Spinner/
+│   ├── Spinner.tsx
+│   ├── Spinner.module.css
+│── Protal/
+│   ├── Protal.tsx
+│── index.ts
+
+config/
+│── storybook/
+│   │── styles/
+│   │   │── index.css
+│   │── decorators/
+│   │   │── RouterDecorator.tsx
+│   │── images/
+│   │   │── image-1.jpg
+│   │   │── image-2.jpg
+│   │   │── image-3.jpg
+│── test/
+│   ├── componentRender.tsx
+
 styles/
+│── themes/
+│   │── default/
+│       ├── variables.css
 │── index.css
 │── reset.css
 │── variables.css
+
+utils/
+│── common/
+│   ├── range.ts
+│   ├── index.ts
+│── context/
+│   ├── createAccurateContext.ts
+│   ├── useAccurateContext.ts
+│── pagination/
+│   ├── paginationRange.ts
+│── index.ts
 
 icons/
 │── CloseIcon.tsx
 │── SearchIcon.tsx
 │── index.ts
+
 ```
 
 </br>

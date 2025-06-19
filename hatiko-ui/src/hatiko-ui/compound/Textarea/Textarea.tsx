@@ -6,16 +6,16 @@ import { useTextareaContext } from './context/useTextareaContext';
 
 import styles from './Textarea.module.css';
 
-interface TextareaCompoundProps {
+interface TextareaCompoundProps extends ComponentProps<'label'> {
   children: ReactNode;
 }
 
-export const TextareaCompound = ({ children }: TextareaCompoundProps) => {
+export const TextareaCompound = ({ children, className, ...props }: TextareaCompoundProps) => {
   const id = useId();
 
   return (
     <TextareaProvider values={{ id }}>
-      <label htmlFor={id} className={styles.label}>
+      <label htmlFor={id} className={clsx(styles.label, className)} {...props}>
         {children}
       </label>
     </TextareaProvider>
@@ -40,12 +40,12 @@ export const TextareaItem = ({ className, variant, ...otherProps }: TextareaItem
 };
 
 interface TextareaTextProps {
-  label: string;
+  text: string;
   className?: string;
 }
 
-export const TextareaText = ({ label, className }: TextareaTextProps) => {
-  return <span className={clsx(styles.label_text, className)}>{label}</span>;
+export const TextareaText = ({ text, className }: TextareaTextProps) => {
+  return <span className={clsx(styles.label_text, className)}>{text}</span>;
 };
 
 interface TextareaErrorTextProps {

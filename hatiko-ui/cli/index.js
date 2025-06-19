@@ -11,6 +11,11 @@ const createUncompoundFolder = require('./utils/Uncompound/createCompoundFolder'
 const copyUncompoundComponents = require('./utils/Uncompound/copyComponents');
 const createUncompoundIndexFile = require('./utils/Uncompound/createIndexFile');
 
+
+const createCompoundFolder = require('./utils/Compound/createFolder');
+const copyCompoundComponents = require('./utils/Compound/copyComponents');
+const createCompoundIndexFile = require('./utils/Compound/createIndexFile');
+
 const createIconsFolder = require('./utils/Icons/createIconsFolder');
 const copyIcons = require('./utils/Icons/copyIcons');
 const createIndexFile = require('./utils/Icons/createIndexFile');
@@ -25,8 +30,18 @@ const checkAndCopyStorybookFolder = require('./utils/config/Stories/checkAndCopy
 const copyStorybookFolder = require('./utils/config/Stories/copyFolder');
 
 
-const checkAndcreateConfigFolder = require('./utils/config/new/checkAndcreateConfigFolder');
+const checkAndcreateConfigFolder = require('./utils/config/config/checkAndcreateConfigFolder');
 
+
+const createAuxiliaryFolder = require('./utils/Auxiliary/createFolder');
+const copyAuxiliaryFolder = require('./utils/Auxiliary/copyFolder');
+
+const createUtilsFolder = require('./utils/Utils/createFolder');
+const copyUtilsFolder = require('./utils/Utils/copyFolder');
+
+
+const createThemesFolder = require('./utils/Themes/createFolder');
+const copyThemesFolder = require('./utils/Themes/copyFolder');
 
 
 program.version('0.0.1');
@@ -38,6 +53,16 @@ program.command("add").description("Adds recorded components to the project").ar
     checkLibraryFolder();
     createLibraryFolder();
 
+
+    if(options.compound){
+        createCompoundFolder()
+        copyCompoundComponents(components);
+        createCompoundIndexFile();
+
+        return true
+    };
+
+
     createUncompoundFolder();
     copyUncompoundComponents(components);
     createUncompoundIndexFile();
@@ -46,18 +71,24 @@ program.command("add").description("Adds recorded components to the project").ar
     copyIcons(components);
     createIndexFile();
 
-    const result = createAssetsFolder();   
+    const result = createAssetsFolder();  
     if(result){
     copyAssets();
     }
 
+     // Auxiliary
+    const AuxiliaryResult = createAuxiliaryFolder();
 
-    // Проверить на наличие папки configs, нужна ли она или нет. Для этого я предлагаю посмотреть 2 варианта: 1 нужны ли коспонентам две этих папки. 2 - Есть ли уже у пользователя такая папка
-    // checkAndCreateFolder();
+    if(AuxiliaryResult){
+        copyAuxiliaryFolder()
+    }
 
-    // createStoriesFolder();
+    // Utils
+    const UtilsResult = createUtilsFolder();
 
-
+    if(UtilsResult){
+        copyUtilsFolder()
+    }
 
     // Если папка есть, вернёт false, иначе true
     const resultConfigFolder = checkAndcreateConfigFolder(components);
@@ -74,9 +105,14 @@ program.command("add").description("Adds recorded components to the project").ar
             if(storybookResult){
                 copyStorybookFolder();
             };
-    }
-
+    };
 })
+
+program.command("theme").description("Adds recorded components to the project").argument("<name...>").action((themeName) => {
+    createThemesFolder();
+    copyThemesFolder(themeName[0]);
+})
+
 
 
 program.parse(process.argv);

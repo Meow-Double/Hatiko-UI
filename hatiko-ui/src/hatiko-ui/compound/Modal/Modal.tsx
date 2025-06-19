@@ -81,30 +81,46 @@ export const ModalCompound = (props: ModalCompoundProps) => {
   );
 };
 
-
-export const ModalHeader = ({children}: {children: ReactNode}) => {
-    return <div className={styles.header}>{children}</div>
+interface ModalHeaderProps {
+  children: ReactNode,
+  className?:string
 }
 
-export const ModalTitle = ({title}: {title: ReactNode}) => {
+export const ModalHeader = ({children, className}: ModalHeaderProps) => {
+    return <div className={clsx(styles.header, className)}>{children}</div>
+}
+
+interface ModalTitleProps {
+  title: ReactNode,
+  className?:string;
+}
+
+export const ModalTitle = ({title}: ModalTitleProps) => {
     return <div>{title}</div>
 }
+interface ModalCloseBtnProps {
+  className?:string;
+}
 
-export const ModalCloseBtn = () => {
+export const ModalCloseBtn = ({className}: ModalCloseBtnProps) => {
 
     const {closeModal} = useModalContext()
 
     return  <button
-                  className={styles.close_btn}
+                  className={clsx(styles.close_btn, className)}
                   onClick={closeModal}
                 >
       <CloseIcon />
     </button>
 }
 
+interface ModalContentProps {
+children: ReactNode;
+className?:string;
+}
 
-export const ModalContent = ({children}: {children: ReactNode}) => {
-      return <div>{children}</div>
+export const ModalContent = ({children, className}: ModalContentProps) => {
+      return <div className={className}>{children}</div>
 }
 
 

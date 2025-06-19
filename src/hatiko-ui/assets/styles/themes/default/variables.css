@@ -1,0 +1,21 @@
+:root {
+
+  /* ----Colors---- */
+  --primary-color: #69974e;
+  --primary-color7: rgba(105 151 78 / 0.7);
+  --primary-light-color: #75a857;
+  --primary-hover-color:#90b978;
+  --primary-disabled-color: #90b978;
+
+  
+  --white-color: #ffffff;
+  --text-color: rgba(223 216 216);
+  --overlay-color:rgba(0 0 0 / 0.6);
+  --lable-text-color: var(--white-color);
+  --outline-color: var(--white-color);
+  --error-color: #d12020;
+  --success-color:#35a94e;
+  --pending-color:#efb90a;
+  --social-link-color: var(--primary-color);
+}
+

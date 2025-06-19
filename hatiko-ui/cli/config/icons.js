@@ -5,6 +5,7 @@ const componentIconsData = {
   Toast: ['CloseIcon'],
   Checkbox: ['TickIcon'],
   Dropdown: ['ArrowDownIcon'],
+  Button: ['SearchIcon']
 };
 
 

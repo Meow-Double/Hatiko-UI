@@ -1,4 +1,4 @@
-import { ComponentProps, useCallback, useId, useState } from 'react';
+import { ComponentProps, ReactNode, useCallback, useId, useState } from 'react';
 import clsx from 'clsx';
 
 import { CheckboxProvider } from './context/CheckboxProvider';
@@ -8,6 +8,7 @@ import styles from './Checkbox.module.css';
 import { TickIcon } from '@/hatiko-ui/icons';
 
 interface CheckboxCompoundProps extends ComponentProps<'label'> {
+  children:ReactNode;
   className?: string;
 }
 

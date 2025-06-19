@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 
-import { paginationRange } from '@/library/utils/pagination/paginationRange';
+import { paginationRange } from '@/hatiko-ui/utils/pagination/paginationRange';
 
 import styles from './Pagination.module.css';
 

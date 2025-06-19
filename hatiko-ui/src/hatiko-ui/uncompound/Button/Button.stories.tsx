@@ -26,6 +26,12 @@ Primary.args = buttonProps;
 export const Outline = { ...ButtonTemplate };
 Outline.args = { ...buttonProps, variant: 'outline' };
 
+export const PrimaryDisabled = { ...ButtonTemplate };
+PrimaryDisabled.args = { ...buttonProps, variant: 'primary', disabled: true };
+
+export const OutlineDisabled = { ...ButtonTemplate };
+OutlineDisabled.args = { ...buttonProps, variant: 'outline', disabled: true };
+
 export const PrimaryStartIcon = { ...ButtonTemplate };
 PrimaryStartIcon.args = { ...buttonProps, startIcon: buttonIcon };
 
