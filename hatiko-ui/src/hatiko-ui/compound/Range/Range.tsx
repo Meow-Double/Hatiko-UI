@@ -5,39 +5,47 @@ import { RangeProvider } from './context/RangeProvider';
 import { useRangeContext } from './context/useRangeContext';
 
 import styles from './Range.module.css';
+import clsx from 'clsx';
 
 interface RangeCompoundProps {
   children: ReactNode;
   min?:number;
   max?:number;
   step?:number;
-
+  className?:string
 }
 
-export const RangeCompound = ({children,min=1, max=100, step=1 }: RangeCompoundProps) => {
+export const RangeCompound = ({children,min=1, max=100, step=1, className }: RangeCompoundProps) => {
   return <RangeProvider values={{min, max, step}}>
-    <div className={styles.field}>{children}</div>
+    <div className={clsx(styles.field, className)}>{children}</div>
   </RangeProvider>
 };
 
-
-export const RangeMinText = () => {
-  const {min} = useRangeContext()
-  return  <span className={styles.min_count}>{min}</span>
+interface RangeMinTextProps {
+  className?:string
 }
 
+export const RangeMinText = ({className}:RangeMinTextProps) => {
+  const {min} = useRangeContext()
+  return  <span className={clsx(styles.min_count, className)}>{min}</span>
+}
 
-export const RangeMaxText = () => {
-    const {max} = useRangeContext()
-  return  <span className={styles.max_count}>{max}</span>
+interface RangeMaxTextProps {
+  className?:string
+}
+
+export const RangeMaxText = ({className}:RangeMaxTextProps) => {
+  const {max} = useRangeContext()
+  return  <span className={clsx(styles.max_count, className)}>{max}</span>
 }
 
 interface RangeLineProps {
   defaultValue?:number;
-   getCurrentValue?: (value: number) => void;
+  getCurrentValue?: (value: number) => void;
+  className?:string
 }
 
-export const RangeLine = ({defaultValue, getCurrentValue}:RangeLineProps ) => {
+export const RangeLine = ({defaultValue, getCurrentValue, className}:RangeLineProps ) => {
   const {max, min, step} = useRangeContext();
   const [value, setValue] = useState<number>(defaultValue ?? 1);
 
@@ -60,13 +68,13 @@ const percent = Math.max(2, Math.round(((newValue - min) / (max - min)) * 100));
     ${percent}%, var(--white-color) ${percent}%)`
     };
 
-  return    <input
-        className={styles.input}
-        style={rangeStyles}
-        type='range'
-        value={value}
-        onChange={onChangeValue}
-      />
+  return  <input
+            className={clsx(styles.input, className)}
+            style={rangeStyles}
+            type='range'
+            value={value}
+            onChange={onChangeValue}
+          />
 }
 
 RangeCompound.displayName = "RangeCompound"

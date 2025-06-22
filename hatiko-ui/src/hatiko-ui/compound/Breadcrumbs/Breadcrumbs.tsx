@@ -9,12 +9,17 @@ import styles from './Breadcrumbs.module.css';
 interface BreadcrumbsCompoundProps {
   children: ReactNode;
   sign?: string;
+  className?: string;
 }
 
-export const BreadcrumbsCompound = ({ children, sign = '/' }: BreadcrumbsCompoundProps) => {
+export const BreadcrumbsCompound = ({
+  children,
+  sign = '/',
+  className
+}: BreadcrumbsCompoundProps) => {
   return (
     <BreadcrumbsProvider values={{ sign }}>
-      <nav>
+      <nav className={className}>
         <ul className={styles.list}>{children}</ul>
       </nav>
     </BreadcrumbsProvider>
@@ -25,12 +30,13 @@ interface BreadcrumbsItem {
   label: string;
   path: string;
   active?: boolean;
+  className?:string;
 }
 
-export const BreadcrumbsItem = ({ active = false, label, path }: BreadcrumbsItem) => {
+export const BreadcrumbsItem = ({ active = false, label, path, className }: BreadcrumbsItem) => {
   const { sign } = useBreadcrumbsContext();
   return (
-    <li>
+    <li className={className}>
       {active ? (
         <span className={styles.last_link}>{label}</span>
       ) : (
@@ -42,6 +48,5 @@ export const BreadcrumbsItem = ({ active = false, label, path }: BreadcrumbsItem
   );
 };
 
-
-BreadcrumbsCompound.displayName = "BreadcrumbsCompound"
-BreadcrumbsItem.displayName = "BreadcrumbsItem"
+BreadcrumbsCompound.displayName = 'BreadcrumbsCompound';
+BreadcrumbsItem.displayName = 'BreadcrumbsItem';

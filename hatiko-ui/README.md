@@ -31,7 +31,7 @@
 
 
 <div>
- <b>Hatiko-UI</b> is a library of UI ready components for React. It contains components as well as styles that are expressed using css modules. In addition, there is a CLI that allows you not to pull everything into the project, but only the necessary part. The main feature is that the components are not imported directly from the library, but a folder with ready components is created. Thanks to this you can always customize them by changing the code and styles and create your own ready-made Ui libraries based on it. 
+ **Hatiko-UI** is a library of UI ready components for React. It contains components as well as styles that are expressed using css modules. In addition, there is a CLI that allows you not to pull everything into the project, but only the necessary part. The main feature is that the components are not imported directly from the library, but a folder with ready components is created. Thanks to this you can always customize them by changing the code and styles and create your own ready-made Ui libraries based on it. 
 </div>
 
 </br>
@@ -104,7 +104,7 @@ A table of components is provided below. There are also designations such as:
 - Stories 📕  
 - Old implementation 🗝️
 
-There are also options for compound and uncompound components. And availability of component histories and test coverage
+There are also options for `compound` and `uncompound` components
 
 
 | Component           | Status | Variants    |Availability|
@@ -274,7 +274,7 @@ Here are examples of using components with descriptions of their props. Each com
       />
 ```
 
-- <b>getCheckboxState</b> - function that returns boolean type, depending on the checkbox activity
+- **getCheckboxState** - function that returns boolean type, depending on the checkbox activity
 
 </br>
 </details>
@@ -312,7 +312,7 @@ Here are examples of using components with descriptions of their props. Each com
       </Modal>
 ```
 
-- <b>lazy</b> - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
+- **lazy** - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
 
 </br>
 </details>
@@ -350,7 +350,7 @@ Here are examples of using components with descriptions of their props. Each com
       </Drawer>
 ```
 
-- <b>lazy</b> - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
+- **lazy** - a component with this parameter will not be embedded in the tree house during rendering until the component is processed
 
 </details>
 
@@ -499,7 +499,7 @@ Here are examples of using components with descriptions of their props. Each com
           Go to the website: https://github.com/Meow-Double
       </Linkify>
 ```
-- <b>Linkify</b> - a component that accepts text, and if links are encountered in the text, they will be replaced by an html tag `<a href=“...”>...</a>`
+- **Linkify** - a component that accepts text, and if links are encountered in the text, they will be replaced by an html tag `<a href=“...”>...</a>`
 
 
 </br>
@@ -577,7 +577,7 @@ Here are examples of using components with descriptions of their props. Each com
             toggle
       />
 ```
-- <b>toggle</b> - allows you to not close previous accordion tabs that have been opened
+- **toggle** - allows you to not close previous accordion tabs that have been opened
 
 </br>
   
@@ -607,7 +607,7 @@ Here are examples of using components with descriptions of their props. Each com
             displayProgress
       />
 ```
-- <b>displayProgress</b> - displays progress percentages
+- **displayProgress** - displays progress percentages
 
 </br>
 
@@ -641,10 +641,10 @@ Here are examples of using components with descriptions of their props. Each com
             getCurrentValue={onGetValue}
       />
 ```
-- <b>getCurrentValue</b> - gets the current value of range
-- <b>step</b> - default:`1`
-- <b>min</b> - default:`1`
-- <b>max</b> - default:`100`
+- **getCurrentValue** - gets the current value of range
+- **step** - default:`1`
+- **min** - default:`1`
+- **max** - default:`100`
 
 </br>
 
@@ -681,7 +681,7 @@ Here are examples of using components with descriptions of their props. Each com
             sign="/"
       />
 ```
-- <b>sign</b> - default:`/`
+- **sign** - default:`/`
 
 > ℹ️ INFO
 > For this component you need to install the library `react-router-dom`
@@ -716,10 +716,10 @@ Here are examples of using components with descriptions of their props. Each com
             setPages={(value) => setValue(value)}
       />
 ```
-- <b>page</b> - сurrent page (active page)
-- <b>totalPage</b> - total number of pages 
-- <b>siblings</b> - range of visible pagination pages
-- <b>setPages</b> - a function that takes as an argument a value - the page that will be changed (most often useState)
+- **page** - сurrent page (active page)
+- **totalPage** - total number of pages 
+- **siblings** - range of visible pagination pages
+- **setPages** - a function that takes as an argument a value - the page that will be changed (most often useState)
 
 
 > ℹ️ INFO  
@@ -755,7 +755,7 @@ Here are examples of using components with descriptions of their props. Each com
             setPages={(files) => setFiles(files)}
       />
 ```
-- <b>fileAccept</b> - specify, comma separated, the file formats that will be allowed to be selected
+- **fileAccept** - specify, comma separated, the file formats that will be allowed to be selected
 
 </br>
 
@@ -869,7 +869,7 @@ Here are examples of using components with descriptions of their props. Each com
 | position | `PositionTypes`   | false|
 | durationDelete | `number`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
@@ -887,7 +887,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Toast</b>
+**Toast**
 
 ```javascript
       <Toast
@@ -902,7 +902,7 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
-- <b>durationDelete</b> - The default will be 2000 milliseconds
+- **durationDelete** - The default will be 2000 milliseconds
 </details>
 
 
@@ -927,7 +927,7 @@ Here are examples of using components with descriptions of their props. Each com
 ```
 
 </br>
-- <b>path</b> - Path to the image file
+- **path** - Path to the image file
 </details>
 
 
@@ -970,7 +970,7 @@ Here are examples of using components with descriptions of their props. Each com
 | title | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type NavigationMenuItem = {
@@ -982,7 +982,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>NavigationMenu</b>
+**NavigationMenu**
 
 
 ```javascript
@@ -1025,7 +1025,7 @@ Here are examples of using components with descriptions of their props. Each com
 | className | `string`   | false|
 | classNameContent | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       export interface TabsProps<T> {
@@ -1039,7 +1039,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Tabs</b>
+**Tabs**
 
 
 ```javascript
@@ -1069,7 +1069,7 @@ Here are examples of using components with descriptions of their props. Each com
 | schema | `T`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       export interface TableProps<T> {
@@ -1082,7 +1082,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Tabs</b>
+**Tabs**
 
 
 ```javascript
@@ -1121,7 +1121,7 @@ Here are examples of using components with descriptions of their props. Each com
 | variant | `ButtonPropsVariants`   | true|
 | ...props   |  `button props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type ButtonPropsVariants = 'primary' | 'outline';
@@ -1142,7 +1142,7 @@ Here are examples of using components with descriptions of their props. Each com
 |----------------|-----|---------------|
 | icon | `ReactNode`   | true|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ButtonIconProps {
@@ -1155,7 +1155,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Button Example 1</b>
+**Button Example 1**
 
 
 ```javascript
@@ -1164,7 +1164,7 @@ Here are examples of using components with descriptions of their props. Each com
             <ButtonIcon icon={<SearchIcon />}>
       </ButtomCompound>
 ```
-<b>Button Example 2</b>
+**Button Example 2**
 
 ```javascript
       <ButtonCompound>
@@ -1172,7 +1172,7 @@ Here are examples of using components with descriptions of their props. Each com
             <span>Find</span>
       </ButtomCompound>
 ```
-<b>Button Example 3</b>
+**Button Example 3**
 
 ```javascript
       <ButtonCompound>
@@ -1198,7 +1198,7 @@ Here are examples of using components with descriptions of their props. Each com
 | children | `ReactNode`   | true|
 | ...props   |  `label props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface InputCompoundProps extends ComponentProps<'label'> {
@@ -1218,7 +1218,7 @@ Here are examples of using components with descriptions of their props. Each com
 | error | `boolean`   | false|
 | ...props   |  `input props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type InputItemVariants = 'primary' | 'outline';
@@ -1241,7 +1241,7 @@ Here are examples of using components with descriptions of their props. Each com
 | variant | `InputVariants`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface InputGroupProps {
@@ -1262,7 +1262,7 @@ Here are examples of using components with descriptions of their props. Each com
 | text | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface InputTextProps {
@@ -1282,7 +1282,7 @@ Here are examples of using components with descriptions of their props. Each com
 | text | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface InputErrorTextProps {
@@ -1297,7 +1297,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Input Example 1</b>
+**Input Example 1**
 
 ```javascript
       <InputCompound>
@@ -1307,7 +1307,7 @@ Here are examples of using components with descriptions of their props. Each com
       </InputCompound>
 ```
 
-<b>Input Example 2</b>
+**Input Example 2**
 
 ```javascript
       <InputCompound>
@@ -1336,7 +1336,7 @@ Here are examples of using components with descriptions of their props. Each com
 | className | `string`   | false|
 | ...props   |  `label props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface InputCompoundProps extends ComponentProps<'label'> {
@@ -1355,7 +1355,7 @@ Here are examples of using components with descriptions of their props. Each com
 | variant | `TextareaItemVariants`   | true|
 | ...props   |  `input props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type TextareaItemVariants = 'primary' | 'outline';
@@ -1377,7 +1377,7 @@ Here are examples of using components with descriptions of their props. Each com
 | text | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface TextareaTextProps {
@@ -1397,7 +1397,7 @@ Here are examples of using components with descriptions of their props. Each com
 | text | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface TextareaErrorTextProps {
@@ -1412,7 +1412,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Textarea Example 1</b>
+**Textarea Example 1**
 
 ```javascript
       <TextareaCompound>
@@ -1421,7 +1421,7 @@ Here are examples of using components with descriptions of their props. Each com
       </TextareaCompound>
 ```
 
-<b>Textarea Example 2</b>
+**Textarea Example 2**
 
 ```javascript
       <TextareaCompound>
@@ -1449,7 +1449,7 @@ Here are examples of using components with descriptions of their props. Each com
 | className | `string`   | false|
 | ...props   |  `label props` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface CheckboxCompoundProps extends ComponentProps<'label'> {
@@ -1468,7 +1468,7 @@ Here are examples of using components with descriptions of their props. Each com
 |----------------|-----|---------------|
 | getCheckboxState | `(state: boolean) => void`   | true|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface CheckboxItemProps extends ComponentProps<'input'> {
@@ -1488,7 +1488,7 @@ Here are examples of using components with descriptions of their props. Each com
 | text | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface CheckboxTextProps {
@@ -1501,7 +1501,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Checkbox Example 1</b>
+**Checkbox Example 1**
 
 ```javascript
       <CheckboxCompound>
@@ -1509,7 +1509,7 @@ Here are examples of using components with descriptions of their props. Each com
       </CheckboxCompound>
 ```
 
-<b>Checkbox Example 2</b>
+**Checkbox Example 2**
 
 ```javascript
        <CheckboxCompound>
@@ -1538,7 +1538,7 @@ Here are examples of using components with descriptions of their props. Each com
 | className | `string`   | false|
 | name   |  `string` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface RadioCompoundProps {
@@ -1559,7 +1559,7 @@ Here are examples of using components with descriptions of their props. Each com
 | title | `string`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface RadioTitleProps {
@@ -1580,7 +1580,7 @@ Here are examples of using components with descriptions of their props. Each com
 | type | `radio`   | false|
 | ...props | `input props`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       type RadioItemProps = ComponentProps<'input'>;
@@ -1589,7 +1589,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 </br>
 
-<b>Radio Example 1</b>
+**Radio Example 1**
 
 ```javascript
       <RadioCompound>
@@ -1597,7 +1597,7 @@ Here are examples of using components with descriptions of their props. Each com
       </RadioCompound>
 ```
 
-<b>Radio Example 2</b>
+**Radio Example 2**
 
 ```javascript
         <RadioCompound>
@@ -1626,7 +1626,7 @@ Here are examples of using components with descriptions of their props. Each com
 | closeModal   |  `() => void` | true|
 | lazy   |  `boolean` | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ModalCompoundProps {
@@ -1650,7 +1650,7 @@ Here are examples of using components with descriptions of their props. Each com
 | children | `ReactNode`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ModalHeaderProps {
@@ -1671,7 +1671,7 @@ Here are examples of using components with descriptions of their props. Each com
 | title | `ReactNode`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ModalTitleProps {
@@ -1690,7 +1690,7 @@ Here are examples of using components with descriptions of their props. Each com
 | children | `ReactNode`   | true|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ModalContentProps {
@@ -1708,7 +1708,7 @@ Here are examples of using components with descriptions of their props. Each com
 |----------------|-----|---------------|
 | className | `string`   | false|
 
-<b>Types</b>
+**Types**
 
 ```typescript
       interface ModalCloseBtnProps {
@@ -1718,7 +1718,7 @@ Here are examples of using components with descriptions of their props. Each com
 </details>
 </br>
 
-<b>Moda Example 1</b>
+**Moda Example 1**
 
 ```javascript
       <ModalCompound 
@@ -1733,7 +1733,7 @@ Here are examples of using components with descriptions of their props. Each com
       </ModalCompound>
 ```
 
-<b>Moda Example 2</b>
+**Moda Example 2**
 
 ```javascript
       <ModalCompound 
@@ -1742,7 +1742,7 @@ Here are examples of using components with descriptions of their props. Each com
       >
             <ModalHeader>
                   <ModalTitle title="modal_title" />
-                   <ModalCloseBtn />
+                  <ModalCloseBtn />
             </ModalHeader>
             <ModalContent>
                   ...content
@@ -1754,16 +1754,1104 @@ Here are examples of using components with descriptions of their props. Each com
 
 
 <!-- -----------------Drawer------------- -->
+
+<details>
+</br>
+<summary>Drawer</summary>
+
+<details>
+</br>
+<summary>DrawerCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| classNameOverlay | `string`   | false|
+| classNameBody | `string`   | false|
+| isOpen   |  `boolean` | true|
+| closeDrawer   |  `() => void` | true|
+| lazy   |  `boolean` | false|
+
+**Types**
+
+```typescript
+      export interface DrawerCompoundProps {
+            children: ReactNode
+            classNameOverlay?: string;
+            classNameBody?: string;
+            isOpen: boolean;
+            closeDrawer: () => void;
+            lazy?: boolean;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>DrawerHeader</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface DrawerHeaderProps {
+            children: ReactNode,
+            className?:string
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>DrawerTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface DrawerTitleProps {
+            title: ReactNode,
+            className?:string;
+      }
+```
+</details>
+
+<details>
+</br>
+<summary>DrawerContent</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface DrawerContentProps {
+            children: ReactNode;
+            className?:string;
+      }
+```
+</details>
+
+<details>
+</br>
+<summary>DrawerCloseBtn</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface DrawerCloseBtnProps {
+            className?:string;
+      }
+```
+</details>
+</br>
+
+**Drawer Example 1**
+
+```javascript
+      <DrawerCompound 
+            isOpen={isOpen} 
+            closeDrawer={onCloseDrawer}
+            classNameBody="drawer_title"
+            lazy
+      >
+            <DrawerContent>
+                  ...content
+            </DrawerContent>
+      </DrawerCompound>
+```
+
+**Drawer Example 2**
+
+```javascript
+      <DrawerCompound 
+            isOpen={isOpen} 
+            closeDrawer={onCloseDrawer}
+      >
+            <DrawerHeader>
+                  <DrawerTitle title="drawer_title" />
+                  <DrawerCloseBtn />
+            </DrawerHeader>
+            <DrawerContent>
+                  ...content
+            </DrawerContent>
+      </DrawerCompound>
+```
+
+</details>
+
+
+
 <!-- -----------------Select------------- -->
+
+<details>
+</br>
+<summary>Select</summary>
+
+<details>
+</br>
+<summary>SelectCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| classNameShowBar | `string`   | false|
+| classNameMenu | `string`   | false|
+
+**Types**
+
+```typescript
+      interface SelectCompoundProps {
+            children: ReactNode;
+            classNameShowBar?: string;
+            classNameMenu?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>SelectItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface SelectItemProps {
+            children: string;
+            className?: string;
+      }
+```
+
+</details>
+
+</br>
+
+**Select Example 1**
+
+```javascript
+      <SelectCompound 
+            classNameShowBar="select_bar"
+      >
+         <SelectItem>Item 1</SelectItem > 
+         <SelectItem>Item 2</SelectItem > 
+         <SelectItem>Item 3</SelectItem > 
+      </SelectCompound>
+```
+
+</details>
+
+
 <!-- -----------------Dropdown------------- -->
+
+
+<details>
+</br>
+<summary>Dropdown</summary>
+
+<details>
+</br>
+<summary>DropdownCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| classNameShowBar | `string`   | false|
+| classNameMenu | `string`   | false|
+| title | `string`   | true|
+
+**Types**
+
+```typescript
+      interface DropdownCompoundProps {
+            children: ReactNode;
+            title: string;
+            classNameShowBar?: string;
+            classNameMenu?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>DropdownItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| path | `ReactNode`   | true|
+| text | `string`   | true|
+
+**Types**
+
+```typescript
+      interface DropdownItemProps {
+            path: string;
+            text: string;
+      }
+```
+
+</details>
+
+</br>
+
+**Dropdown Example 1**
+
+```javascript
+      <DropdownCompound 
+            classNameShowBar="select_bar"
+      >
+         <DropdownItem path="/item1" text="item1"/> 
+         <DropdownItem path="/item2" text="item2"/> 
+         <DropdownItem path="/item3" text="item3"/> 
+      </DropdownCompound>
+```
+
+</details>
+
+
 <!-- -----------------Confirm------------- -->
+
+<details>
+</br>
+<summary>Confirm</summary>
+
+<details>
+</br>
+<summary>ConfirmCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| classNameOverlay | `string`   | false|
+| classNameBody | `string`   | false|
+| isOpen   |  `boolean` | true|
+| lazy   |  `boolean` | false|
+
+**Types**
+
+```typescript
+      interface ConfirmCompoundProps {
+            children: ReactNode;
+            classNameOverlay?: string;
+            classNameBody?: string;
+            isOpen: boolean;
+            lazy?: boolean;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>ConfirmTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `string`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ConfirmTitleProps {
+            title: string;
+            className?: string;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>ConfirmButtonList</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ConfirmButtonListProps {
+            children: ReactNode;
+            className?: string;
+      }
+```
+</details>
+
+
+<details>
+</br>
+<summary>ConfirmButton</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| type | `ConfirmButtonTypes`   | true|
+| text | `string`   | false|
+| getAnswer | `(value: boolean) => void`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      type ConfirmButtonTypes = 'truth' | 'lies';
+
+      interface ConfirmButtonProps {
+            type: ConfirmButtonTypes;
+            text?: string;
+            getAnswer: (value: boolean) => void;
+            className?: string;
+      }
+```
+</details>
+
+</br>
+
+**Confirm Example 1**
+
+```javascript
+      <ConfirmCompound
+            classNameBody="confirm_body"
+            isOpen={isOpen}
+            lazy
+      >
+            <ConfirmTitle title="Do you like hatiko-ui?"/>
+            <ConfirmButtonList>
+                  <ConfirmButton 
+                        type="truth" 
+                        getAnswer={onGetValue} 
+                        text="yes"
+                  >
+                  <ConfirmButton 
+                        type="lies" 
+                        getAnswer={onGetValue} 
+                        text="yes"
+                  >
+            </ConfirmButtonList>
+      </ConfirmCompound>
+```
+
+</details>
+
 <!-- -----------------Accordion------------- -->
+
+<details>
+</br>
+<summary>Accordion</summary>
+
+<details>
+</br>
+<summary>AccordionCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface AccordionCompoundProps {
+            children: ReactNode;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>AccordionGroup</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| title | `string`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface AccordionGroupProps {
+            children: ReactNode;
+            title: string;
+            className?: string;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>AccordionItem</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `string`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface AccordionItemProps {
+            title: string;
+            className?: string;
+      }
+```
+</details>
+
+</br>
+
+**Accordion Example 1**
+
+```javascript
+      <AccordionCompound
+            classNameBody="confirm_body"
+            isOpen={isOpen}
+            lazy
+      >
+            <AccordionGroup>
+                  <AccordionItem title="Select"/>
+                  <AccordionItem title="Modal"/>
+                  <AccordionItem title="Drawer"/>
+            </AccordionGroup>
+      </AccordionCompound>
+```
+
+</details>
+
 <!-- -----------------Progressbar------------- -->
+
+<details>
+</br>
+<summary>Progressbar</summary>
+
+<details>
+</br>
+<summary>ProgressbarCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| progress | `number`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ProgressbarCompoundProps {
+            children: ReactNode;
+            progress: number;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>ProgressbarInfoGrouop</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ProgressbarInfoGrouopProps {
+            children: ReactNode;
+            className?: string;
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>ProgressbarLine</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ProgressbarLineProps {
+            className?: string;
+      }
+```
+</details>
+
+
+<details>
+</br>
+<summary>ProgressbarTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| title | `ReactNode`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ProgressbarTitleProps {
+            title: ReactNode;
+            className?: string;
+      }
+```
+</details>
+
+<details>
+</br>
+<summary>ProgressbarPercent</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface ProgressbarPercentProps {
+            className?: string;
+      }
+```
+</details>
+
+
+</br>
+
+**Progressbar Example 1**
+
+```javascript
+      <ProgressbarCompound progress={20}>
+            <ProgressbarInfoGrouop>
+                  <ProgressbarTitle title="progress"/>
+                  <ProgressbarPercent />
+            </ProgressbarInfoGrouop>
+            <PrrogressbarLine />
+      </ProgressbarCompound>
+```
+
+**Progressbar Example 2**
+
+```javascript
+      <ProgressbarCompound progress={20} className="progressbar">
+            <PrrogressbarLine />
+      </ProgressbarCompound>
+```
+
+</details>
+
 <!-- -----------------Range------------- -->
+
+<details>
+</br>
+<summary>Range</summary>
+
+<details>
+</br>
+<summary>RangeCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| min | `number`   | false|
+| max | `number`   | false|
+| step | `number`   | false|
+
+**Types**
+
+```typescript
+      interface RangeCompoundProps {
+            children: ReactNode;
+            min?:number;
+            max?:number;
+            step?:number;
+            className?:string
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>RangeMinText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface RangeMinTextProps {
+            className?:string
+      }
+```
+
+</details>
+
+
+<details>
+</br>
+<summary>RangeMaxText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface RangeMaxTextProps {
+            className?:string
+      }
+```
+</details>
+
+
+<details>
+</br>
+<summary>ProgressbarTitle</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| defaultValue | `number`   | true|
+| getCurrentValue | `(value: number) => void`   | true|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface RangeLineProps {
+            defaultValue?:number;
+            getCurrentValue?: (value: number) => void;
+            className?:string;
+      }
+```
+</details>
+
+</br>
+
+**Range Example 1**
+
+```javascript
+      <RangeCompound min={20} max={2000} step={10}>
+            <RangeMinText />
+            <RangeLine default={60} getCurrentValue={onGetValue}/>
+            <RangeMaxText />
+      </RangeCompound>
+```
+
+**Range Example 2**
+
+```javascript
+        <RangeCompound className="range" >
+            <RangeLine getCurrentValue={onGetValue}/>
+      </RangeCompound>
+```
+
+</details>
+
 <!-- -----------------Breadcrumbs------------- -->
+
+
+<details>
+</br>
+<summary>Breadcrumbs</summary>
+
+<details>
+</br>
+<summary>BreadcrumbsCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| sign | `string`   | false|
+
+**Types**
+
+```typescript
+      interface BreadcrumbsCompoundProps {
+            children: ReactNode;
+            sign?: string;
+            className?:string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>RangeMinText</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| label | `string`   | true|
+| path | `string`   | true|
+| active | `boolean`   | false|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface BreadcrumbsItem {
+            label: string;
+            path: string;
+            active?: boolean;
+            className?:string;
+      }
+```
+
+</details>
+
+</br>
+
+**Range Example 1**
+
+```javascript
+      <BreadcrumbsCompound sign="//">
+            <BreadcrumbsItem label="item1" path="/item1"/>
+            <BreadcrumbsItem label="item2" path="/item2"/>
+            <BreadcrumbsItem label="item3" path="/item3"/>
+            <BreadcrumbsItem label="item4" path="/item4" active/>
+      </BreadcrumbsCompound>
+```
+
+</details>
+
 <!-- -----------------Pagination------------- -->
+
+
+<details>
+</br>
+<summary>Pagination</summary>
+
+<details>
+</br>
+<summary>PaginationCompound</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| children | `ReactNode`   | true|
+| className | `string`   | false|
+| page | `number`   | true|
+| totalPage | `number`   | true|
+| siblings | `number`   | true|
+| setPages | `(value: number) => void`   | true|
+
+**Types**
+
+```typescript
+      interface PaginationCompoundProps {
+            children:ReactNode;
+            page:number,
+            totalPage: number,
+            siblings:number
+            setPages:(value: number) => void;
+            className?:string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>PaginationCells</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+
+**Types**
+
+```typescript
+      interface PaginationCellsProps{
+            className?:string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>PaginationArrow</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+| direction | `right` |\ `left`   | false|
+
+**Types**
+
+```typescript
+      interface PaginationArrowProps {
+            direction:"right" | "left";
+            className?:string;
+      }
+```
+
+</details>
+
+<details>
+</br>
+<summary>PaginationDoubleArrow</summary>
+
+|  Props |    Types | Compulsory |
+|----------------|-----|---------------|
+| className | `string`   | false|
+| direction | `right` |\ `left`   | false|
+
+**Types**
+
+```typescript
+      interface PaginationArrowProps {
+            direction:"right" | "left";
+            className?:string;
+      }
+```
+
+</details>
+
+
+</br>
+
+**Pagination Example 1**
+
+```javascript
+      <PaginationCompound 
+            page={currentPage} 
+            totalPage={totalPage}
+            siblings={3}
+            setPages={onGetValue}
+            className="pagination"
+      >
+            <PaginationDoubleArrow  direction="left"/>
+            <PaginationArrow direction="left"/>
+            <PaginationCells />
+            <PaginationArrow direction="right"/>
+            <PaginationDoubleArrow  direction="right"/>
+
+      </PaginationCompound>
+```
+
+**Pagination Example 2**
+
+```javascript
+      <PaginationCompound 
+            page={4} 
+            totalPage={10}
+            siblings={3}
+            setPages={onGetValue}
+            className="pagination"
+      >
+            <PaginationArrow direction="left"/>
+            <PaginationCells />
+            <PaginationArrow direction="right"/>
+
+      </PaginationCompound>
+```
+
+</details>
+
 <!-- -----------------Navigation Menu------------- -->
+
+<details>
+<summary>Navigation Menu</summary>
+</br>
+<details>
+<summary>NavigationMenuCompound</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| title      | `string`    | true       |
+| children   | `ReactNode` | true       |
+| className  | `string`    | false      |
+
+**Types**
+
+```typescript
+      interface NavigationMenuCompoundProps {
+            children: ReactNode;
+            className?: string;
+            title: string;
+      }
+```
+
+</details>
+
+<details>
+<summary>NavigationMenuItem</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| children   | `ReactNode` | true       |
+| path      | `string`    | true       |
+| className  | `string`    | false      |
+
+**Types**
+
+```typescript
+      interface NavigationMenuItemProps {
+            children: string;
+            path: string;
+            className?: string;
+      }
+```
+
+</details>
+
+
+</br>
+
+**Navigation Menu Example 1**
+
+```javascript
+      <NavigationMenuCompound title="Menu">
+            <NavigationMenuItem path="/home">Home</NavigationMenuItem>
+            <NavigationMenuItem path="/about">About</NavigationMenuItem>
+            <NavigationMenuItem path="/contact">Contact</NavigationMenuItem>
+      </NavigationMenuCompound>
+
+```
+
+</details>
+
+
+
 <!-- -----------------Table------------- -->
+
+<details>
+<summary>Table</summary>
+</br>
+<details>
+<summary>TableCompound</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| children   | `ReactNode` | true       |
+| className  | `string`    | false      |
+
+**Types**
+
+```typescript
+      interface TableCompoundProps {
+            children: ReactNode;
+            className?: string;
+      }
+```
+
+</details>
+
+<details>
+<summary>TableBody</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| children   | `ReactNode` | true       |
+| className  | `string`    | false      |
+
+
+</details>
+
+<details>
+<summary>TableRow</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| children   | `ReactNode` | true       |
+| className  | `string`    | false      |
+
+
+</details>
+
+
+<details>
+<summary>TableData</summary>
+
+| Props      | Types       | Compulsory |
+|------------|-------------|------------|
+| children   | `ReactNode` | true       |
+| className  | `string`    | false      |
+
+
+</details>
+
+
+
+</br>
+
+**Table Menu Example 1**
+
+```javascript
+      <TableData>
+            <TableBody>
+                  <TableData>
+                        <TableRow>
+                              Item 1
+                        </TableRow>
+                        <TableRow>
+                              Item 2
+                        </TableRow>
+                        <TableRow>
+                              Item 3
+                        </TableRow>
+                  </TableData>
+                  <TableData>
+                        <TableRow>
+                              Item 4
+                        </TableRow>
+                        <TableRow>
+                              Item 5
+                        </TableRow>
+                        <TableRow>
+                              Item 6
+                        </TableRow>
+                  </TableData>
+            </TableBody>
+      </TableData>
+
+```
+
+</details>
+
+
+<!-- ---------------------------------- -->
 
 
 </details>
@@ -1843,7 +2931,7 @@ Here are examples of using components with descriptions of their props. Each com
 
 - `add <...arguments>` - Adds the uncompound components specified as arguments to the catalog.
 
-<b>Example</b>
+**Example**
 
 ```javascript
 hatiko-ui add Button Input Select
@@ -1854,7 +2942,7 @@ hatiko-ui add Button Input Select
 - `add <...arguments> --compound` - Adds the compound components specified as arguments to the catalog.
 (The flag compound indicates that the components will be of the compound type).
 
-<b>Example</b>
+**Example**
 
 ```javascript
 hatiko-ui add Button Input Modal --compound
@@ -1869,7 +2957,7 @@ hatiko-ui add Button Input Modal --compound
 
 - `theme <theme name>` - adds a folder containing the colors of a particular theme.
 
-<b>Examples</b>
+**Example**
 
 ```javascript
 hatiko-ui theme ocean
@@ -1885,10 +2973,10 @@ hatiko-ui theme ocean
 Contains three main folders:
 - `uncompound` – contains the catalogs of the individual components and the file `index.ts`.
 - `compound` – contains directories of individual components and a `compound` file of type `index.ts`.
-- `auxiliary` – contains all auxiliary components
+- `auxiliary` – contains all auxiliary components.
 - `styles` – includes three files: `index.css`, `reset.css`, `variables.css`.
 - `icons` – contains files with icons and `index.ts` to export them.
-- `utils` – contains auxiliary functions and utilities
+- `utils` – contains auxiliary functions and utilities.
 - `config` – contains everything necessary for `storybook` and `tests`.
 
 ```plaintext

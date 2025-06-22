@@ -81,30 +81,49 @@ export const DrawerCompound = (props: DrawerCompoundProps) => {
   );
 };
 
-
-export const DrawerHeader = ({children}: {children: ReactNode}) => {
-    return <div className={styles.header}>{children}</div>
+interface DrawerHeaderProps {
+  children: ReactNode,
+  className?:string
 }
 
-export const DrawerTitle = ({title}: {title: ReactNode}) => {
-    return <div>{title}</div>
+export const DrawerHeader = ({children, className}: DrawerHeaderProps) => {
+    return <div className={clsx(styles.header, className)}>{children}</div>
 }
 
-export const DrawerCloseBtn = () => {
+
+interface DrawerTitleProps {
+  title: ReactNode,
+  className?:string;
+}
+
+export const DrawerTitle = ({title, className}: DrawerTitleProps) => {
+    return <div className={className}>{title}</div>
+}
+
+interface DrawerCloseBtnProps {
+  className?:string;
+}
+
+
+export const DrawerCloseBtn = ({className}: DrawerCloseBtnProps) => {
 
     const {closeDrawer} = useDrawerContext()
 
     return  <button
-                  className={styles.close_btn}
+                  className={clsx(styles.close_btn, className)}
                   onClick={closeDrawer}
                 >
       <CloseIcon />
     </button>
 }
 
+interface DrawerContentProps {
+  children: ReactNode;
+  className?:string;
+}
 
-export const DrawerContent = ({children}: {children: ReactNode}) => {
-      return <div>{children}</div>
+export const DrawerContent = ({children, className}: DrawerContentProps) => {
+      return <div className={className}>{children}</div>
 }
 
 

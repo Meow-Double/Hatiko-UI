@@ -40,17 +40,20 @@ export const ConfirmCompound = ({
 
 interface ConfirmTitleProps {
   title: string;
+  className?: string;
 }
-export const ConfirmTitle = ({ title }: ConfirmTitleProps) => {
-  return <h2 className={styles.title}>{title}</h2>;
+
+export const ConfirmTitle = ({ title, className }: ConfirmTitleProps) => {
+  return <h2 className={clsx(styles.title, className)}>{title}</h2>;
 };
 
-interface ConfirmButtonWrapperProps {
+interface ConfirmButtonListProps {
   children: ReactNode;
+  className?: string;
 }
 
-export const ConfirmButtonList = ({ children }: ConfirmButtonWrapperProps) => {
-  return <div className={styles.buttons}>{children}</div>;
+export const ConfirmButtonList = ({ children, className }: ConfirmButtonListProps) => {
+  return <div className={clsx(styles.buttons, className)}>{children}</div>;
 };
 
 type ConfirmButtonTypes = 'truth' | 'lies';

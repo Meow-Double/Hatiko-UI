@@ -29,11 +29,11 @@ export const ProgressbarInfoGrouop = ({ children, className }: ProgressbarInfoGr
   return <div className={clsx(styles.info, className)}>{children}</div>;
 };
 
-interface ProgressbarLine {
+interface ProgressbarLineProps {
   className?: string;
 }
 
-export const ProgressbarLine = ({ className }: ProgressbarLine) => {
+export const ProgressbarLine = ({ className }: ProgressbarLineProps) => {
   const { progress } = useProgressbarContext();
 
   const progressStyles: CSSProperties & Record<string, string> = {
